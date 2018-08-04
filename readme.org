@@ -17,7 +17,6 @@ The only required MELPA plugin is the [[https://github.com/jwiegley/use-package]
 #+BEGIN_SRC emacs-lisp
 (package-install "use-package")
 #+END_SRC
-```
 
 ** Hand me my/packs
 
@@ -54,6 +53,8 @@ Or you can add the package to init.el:
  'split
  'hours)
 #+END_SRC
+
+
 
 
 
