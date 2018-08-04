@@ -52,7 +52,6 @@
    (C . t)
    (emacs-lisp . t)
    (js . t)
-   (http . t)
    (perl . t)
    (python . t)
    (sh . t)

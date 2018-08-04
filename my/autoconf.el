@@ -21,7 +21,7 @@
 
 (provide 'using)
 
-;;; using.el ends here
+;;; autoconf.el ends here
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -29,17 +29,14 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("efa785ca9b6da184d934101900d741d60bf274b46ea68addbcd59585302861e3" "3cd28471e80be3bd2657ca3f03fbb2884ab669662271794360866ab60b6cb6e6" "3b69ddebc3b1386c63e70afa0eca90d1a775c52ad144d16df932400f3afe1c30" "3cc2385c39257fed66238921602d8104d8fd6266ad88a006d0a4325336f5ee02" "e9776d12e4ccb722a2a732c6e80423331bcb93f02e089ba2a4b02e85de1cf00e" "9ca6309dc6fc455d77c4a18fba3e1c7b24476b7b622c7538ca129f3acc3c3809" "766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" "7bf3008de4c1be932cac1f213859613f5d6d06189d0bd6f5b2000a8430fe9a58" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "8e1601ae929030a0314aa11a8d17a74c0ed3c5b455c04921c62043ed4fc48659" default)))
+    ("766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" default)))
  '(epg-gpg-program "/usr/local/Cellar/gnupg/2.2.3/bin/gpg")
  '(package-selected-packages
    (quote
-    (exec-path-from-shell slime web-mode php-mode magit flycheck rainbow-delimiters helpful gitignore-mode less-css-mode projectile org-bullets expand-region counsel diminish company ag whole-line-or-region ace-window use-package ivy ob-php ob-http benchmark-init)))
- '(send-mail-function (quote mailclient-send-it)))
+    (web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  )
-
-;;; autoconf.el ends here

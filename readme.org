@@ -9,8 +9,46 @@ There are many like it, but this one is mine.
 *** [[https://github.com/hlissner/doom-emacs][@hlissner/doom-emacs]]
 *** [[https://github.com/cjohansen/.emacs.d][@cjohansen/emacs.d]]
 
-** Setup
+** Quick Setup
 
+The only required MELPA plugin is the [[https://github.com/jwiegley/use-package]][use-package]]. If it doesn't install automatically, run:
+
+```
+package-install RET use-package RET
+```
+
+** Hand me my/packs
+
+When I use use-package, I almost always want to (a.) install the package and then (b.) configure the package in its config-package.el file. As such, you can install a new MELPA package using:
+
+```
+my/packs/inst RET package-name RET
+```
+
+This will install the package and also autogenerate a configuration file, which you can edit at:
+
+```
+my/packs/conf RET package-name RET
+```
+
+Packages can be activated/deactivated manually:
+
+```
+my/packs/load RET package-name RET
+```
+
+Or you can add the package to init.el:
+
+```lisp
+(my/packs/load
+ ;; core packs
+ 'melpa
+ 'backups
+ 'package-name
+ ...
+ 'split
+ 'hours)
+```
 
 
 
