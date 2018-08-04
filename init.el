@@ -30,7 +30,7 @@
 (load my/packs.el)
 
 (my/packs/load
- ;; core setup
+ ;; core packs
  'melpa
  'backups
  'data-tuck
@@ -47,7 +47,7 @@
  'slime
  'speed
  
- ;; core packages
+ ;; core elpa plugs
  'ace-window
  'ag
  'company
@@ -55,7 +55,7 @@
  'avy
  'ivy
  
- ;; other packages
+ ;; nice elpa plugs
  'diminish
  'expand-region
  'helpful

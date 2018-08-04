@@ -1,2 +1,5 @@
-## This is my emacs configuration
-### There are many like it, but this one is mine.
+* .emacs.d
+** This is my emacs configuration
+
+There are many like it, but this one is mine. 
+
