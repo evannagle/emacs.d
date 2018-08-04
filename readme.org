@@ -14,33 +14,37 @@ There are many like it, but this one is mine.
 
 The only required MELPA plugin is the [[https://github.com/jwiegley/use-package]][use-package]]. If it doesn't install automatically, run:
 
-```
-package-install RET use-package RET
+#+BEGIN_SRC emacs-lisp
+(package-install "use-package")
+#+END_SRC
 ```
 
 ** Hand me my/packs
 
 When I use use-package, I almost always want to (a.) install the package and then (b.) configure the package in its config-package.el file. As such, you can install a new MELPA package using:
 
-```
-my/packs/inst RET package-name RET
-```
+#+BEGIN_SRC emacs-lisp
+;; M-x my/packs/inst RET rainbow-delmiters RET
+(my/packs/inst 'rainbow-delimiters)
+#+END_SRC
 
 This will install the package and also autogenerate a configuration file, which you can edit at:
 
-```
-my/packs/conf RET package-name RET
-```
+#+BEGIN_SRC emacs-lisp
+;; M-x my/packs/conf RET rainbow-delimiters RET
+(my/packs/conf 'rainbow-delimiters)
+#+END_SRC
 
 Packages can be activated/deactivated manually:
 
-```
-my/packs/load RET package-name RET
-```
+#+BEGIN_SRC emacs-lisp
+;; M-x my/packs/load RET rainbow-delimiters
+(my/packs/load 'rainbow-delimiters)
+#+END_SRC
 
 Or you can add the package to init.el:
 
-```lisp
+#+BEGIN_SRC emacs-lisp
 (my/packs/load
  ;; core packs
  'melpa
@@ -49,7 +53,9 @@ Or you can add the package to init.el:
  ...
  'split
  'hours)
-```
+#+END_SRC
+
+
 
 
 
