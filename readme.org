@@ -3,3 +3,14 @@
 
 There are many like it, but this one is mine. 
 
+** Other configs worth checking out:
+
+*** [[https://github.com/purcell/emacs.d][@purcell/emacs.d]]
+*** [[https://github.com/hlissner/doom-emacs][@hlissner/doom-emacs]]
+*** [[https://github.com/cjohansen/.emacs.d][@cjohansen/emacs.d]]
+
+** Setup
+
+
+
+
