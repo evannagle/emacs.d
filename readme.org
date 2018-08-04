@@ -12,7 +12,7 @@ There are many like it, but this one is mine.
 
 ** Quick Setup
 
-The only required MELPA plugin is the [[https://github.com/jwiegley/use-package]][use-package]]. If it doesn't install automatically, run:
+The only required MELPA plugin is the [[https://github.com/jwiegley/use-package][use-package]] plugin. If it doesn't install automatically, you can run:
 
 #+BEGIN_SRC emacs-lisp
 ;; M-x package-install RET use-package RET
