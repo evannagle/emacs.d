@@ -15,12 +15,13 @@ There are many like it, but this one is mine.
 The only required MELPA plugin is the [[https://github.com/jwiegley/use-package]][use-package]]. If it doesn't install automatically, run:
 
 #+BEGIN_SRC emacs-lisp
+;; M-x package-install RET use-package RET
 (package-install "use-package")
 #+END_SRC
 
 ** Hand me my/packs
 
-When I use use-package, I almost always want to (a.) install the package and then (b.) configure the package in its config-package.el file. As such, you can install a new MELPA package using:
+When I use use-package, I almost always want to (a.) install the package and then (b.) configure the package in its own comfy little config-<package>.el file. As such, you can install a new MELPA package using:
 
 #+BEGIN_SRC emacs-lisp
 ;; M-x my/packs/inst RET rainbow-delmiters RET
@@ -34,7 +35,7 @@ This will install the package and also autogenerate a configuration file, which 
 (my/packs/conf 'rainbow-delimiters)
 #+END_SRC
 
-Packages can be activated/deactivated manually:
+Packages can be activated/deactivated manually. This seems unnecessary.
 
 #+BEGIN_SRC emacs-lisp
 ;; M-x my/packs/load RET rainbow-delimiters
