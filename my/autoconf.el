@@ -33,7 +33,7 @@
  '(epg-gpg-program "/usr/local/Cellar/gnupg/2.2.3/bin/gpg")
  '(package-selected-packages
    (quote
-    (web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
+    (evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

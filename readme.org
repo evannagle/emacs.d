@@ -7,8 +7,8 @@ There are many like it, but this one is mine.
 - [[https://github.com/purcell/emacs.d][@purcell/emacs.d]]
 - [[https://github.com/hlissner/doom-emacs][@hlissner/doom-emacs]]
 - [[https://github.com/cjohansen/.emacs.d][@cjohansen/emacs.d]]
-
 - [[https://github.com/skeeto/.emacs.d][@skeeto/.emacs.d]]
+- [[https://github.com/jonnycyr/.emacs.d][@jonnycyr/.emacs.d]]
 
 ** Quick Setup
 

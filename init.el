@@ -46,6 +46,9 @@
  'abbrevs
  'slime
  'speed
+
+ ;; for the vi-afflicted
+ 'evil
  
  ;; core elpa plugs
  'ace-window
