@@ -10,6 +10,7 @@ There are many like it, but this one is mine.
 - [[https://github.com/skeeto/.emacs.d][@skeeto/.emacs.d]]
 - [[https://github.com/jonnycyr/.emacs.d][@jonnycyr/.emacs.d]]
 - [[https://github.com/rakanalh/dotemacs]][@rakanalh/dotemacs]]
+- [[https://github.com/ubolonton/.emacs.d]][@ubolonton/.emacs.d]]
 
 ** Quick Setup
 
