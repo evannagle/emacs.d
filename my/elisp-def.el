@@ -1,4 +1,4 @@
-;;; evil.el --- Configuration for the evil package
+;;; elisp-def.el --- Configuration for the elisp-def package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,23 +19,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defvar my/evil/commands
-  '((elisp-def . "def[ine]")
-    (evil-indent . "in[dent]")))
-
-(defun my/evil/commands/load ()
-  "Load my/evil/commands after evil mode is activated."
-  (dolist (cmd my/evil/commands)
-    (let ((ex-cmd (cdr cmd))
-	  (el-cmd (car cmd)))
-      (evil-ex-define-cmd ex-cmd el-cmd))))
-
-(use-package evil
+(use-package elisp-def
   :ensure t
   :config
-  (evil-mode 1)
-  (my/evil/commands/load))
+  (dolist (hook '(emacs-lisp-mode-hook ielm-mode-hook))
+  (add-hook hook #'elisp-def-mode)))
 
-(provide 'my/evil)
+(provide 'my/elisp-def)
 
-;;; evil.el ends here
+;;; elisp-def.el ends here

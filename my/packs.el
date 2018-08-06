@@ -54,7 +54,8 @@
 	 (template (replace-regexp-in-string "$file" name.el template))
 	 (template (replace-regexp-in-string "$description" (format "Configuration for the %s package" name) template)))
     (unless (file-exists-p file)
-      (write-region template nil file nil))))
+      (write-region template nil file nil))
+    (my/packs/conf name)))
   
 (defun my/packs/inst (package)
   "Install a package and create a config template"
@@ -63,7 +64,8 @@
       (setq package (intern package)))
   (my/packs/ensure 'use-package)
   (my/packs/ensure package)
-  (my/packs/new (symbol-name package)))
+  (my/packs/new (symbol-name package))
+  (my/packs/conf (symbol-name package)))
 
 (defun my/packs/conf (&optional package)
   "Configure a module"

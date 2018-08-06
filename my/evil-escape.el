@@ -1,4 +1,4 @@
-;;; evil.el --- Configuration for the evil package
+;;; evil-escape.el --- Configuration for the evil-escape package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,23 +19,24 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defvar my/evil/commands
-  '((elisp-def . "def[ine]")
-    (evil-indent . "in[dent]")))
-
-(defun my/evil/commands/load ()
-  "Load my/evil/commands after evil mode is activated."
-  (dolist (cmd my/evil/commands)
-    (let ((ex-cmd (cdr cmd))
-	  (el-cmd (car cmd)))
-      (evil-ex-define-cmd ex-cmd el-cmd))))
-
-(use-package evil
+(use-package evil-escape
   :ensure t
+  :commands evil-escape-mode
+  :init
+  (setq evil-escape-excluded-states '(normal visual multiedit emacs motion)
+        evil-escape-excluded-major-modes '(neotree-mode)
+        evil-escape-key-sequence "jk"
+        evil-escape-delay 0.25)
+  (add-hook 'after-init-hook #'evil-escape-mode)
   :config
-  (evil-mode 1)
-  (my/evil/commands/load))
+  ;; no `evil-escape' in minibuffer
+  (cl-pushnew #'minibufferp evil-escape-inhibit-functions :test #'eq)
 
-(provide 'my/evil)
+  (define-key evil-insert-state-map  (kbd "C-g") #'evil-escape)
+  (define-key evil-replace-state-map (kbd "C-g") #'evil-escape)
+  (define-key evil-visual-state-map  (kbd "C-g") #'evil-escape)
+  (define-key evil-operator-state-map (kbd "C-g") #'evil-escape))
 
-;;; evil.el ends here
+(provide 'my/evil-escape)
+
+;;; evil-escape.el ends here

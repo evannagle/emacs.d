@@ -46,9 +46,11 @@
  'abbrevs
  'slime
  'speed
-
+ 'exec-path-from-shell
+ 
  ;; for the vi-afflicted
  'evil
+ 'evil-escape
  
  ;; core elpa plugs
  'ace-window
@@ -61,12 +63,14 @@
  ;; nice elpa plugs
  'diminish
  'expand-region
+ 'elisp-def
  'helpful
  'magit
  'org-bullets
  'projectile
  'rainbow-delimiters
-
+ 'whole-line-or-region
+ 
  ;; modes
  'gitignore-mode
  'less-css-mode

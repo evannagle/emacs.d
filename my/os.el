@@ -21,14 +21,8 @@
 
 (setq mac-command-modifier 'super)
 
-(global-set-key (kbd "s-v") 'whole-line-or-region-yank)
-(global-set-key (kbd "s-c") 'whole-line-or-region-kill-ring-save)
-(global-set-key (kbd "s-x") 'whole-line-or-region-kill-region)
-(global-set-key (kbd "s-s") 'swiper-all)
-(global-set-key (kbd "s-r") 'swiper-all-query-replace)
 (global-set-key (kbd "s-.") 'save-buffer)
 (global-set-key (kbd "s-b") 'bookmark-jump)
-(global-set-key (kbd "s-j") 'al/jump)
 
 (provide 'my/os)
 
