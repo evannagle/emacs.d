@@ -19,9 +19,11 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+
 (defvar my/evil/commands
   '((elisp-def . "def[ine]")
-    (evil-indent . "in[dent]")))
+    (evil-indent . "in[dent]")
+    (my/org/archive-item . "arc[hive]")))
 
 (defun my/evil/commands/load ()
   "Load my/evil/commands after evil mode is activated."
@@ -34,7 +36,14 @@
   :ensure t
   :config
   (evil-mode 1)
-  (my/evil/commands/load))
+  (my/evil/commands/load)
+  (define-key evil-insert-state-map (kbd "C-n") 'next-line)
+  (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
+  (define-key evil-insert-state-map (kbd "C-a") 'beginning-of-line)
+  (define-key evil-insert-state-map (kbd "C-e") 'end-of-line)
+  (define-key evil-insert-state-map (kbd "C-f") 'forward-char)
+  (define-key evil-insert-state-map (kbd "C-b") 'backward-char)
+  (define-key evil-insert-state-map (kbd "C-t") 'transpose-chars))
 
 (provide 'my/evil)
 

@@ -54,7 +54,7 @@
    (js . t)
    (perl . t)
    (python . t)
-   (sh . t)
+   (shell . t) ;; used to be (sh .t )
    (sql . t)))
 
 (defun my/org/file (file)
@@ -77,9 +77,10 @@
   (org-todo "DONE")
   (org-archive-subtree-default))
 
-(my/org/add-template "E" "emacs-lisp")
-(my/org/add-template "W" "awk")
 (my/org/add-template "B" "sh")
+(my/org/add-template "E" "emacs-lisp")
+(my/org/add-template "P" "perl")
+(my/org/add-template "W" "awk")
 
 (provide 'my/org)
 

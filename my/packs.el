@@ -20,8 +20,19 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 (defvar my/.emacs.d/mods (expand-file-name "mods" user-emacs-directory))
+(defvar my/.emacs.d/init.el (expand-file-name "init.el" my/.emacs.d/))
 (defvar my/package-template (expand-file-name "template.el.m4" my/.emacs.d/mods))
-  
+(defvar my/packs/bookmarks '())
+
+(add-to-list 'my/packs/bookmarks `("mods" ,my/.emacs.d/mods))
+(add-to-list 'my/packs/bookmarks `("e" ,my/.emacs.d/))
+(add-to-list 'my/packs/bookmarks `("i" ,my/.emacs.d/init.el))
+
+(defun my/packs/init ()
+  "Find the init.el file where packs are loaded."
+  (interactive)
+  (find-file my/.emacs.d/init.el))
+
 (defun my/packs/ensure (package)
   "Ensure that a package has been installed"
   (unless (require package nil 'noerror)
@@ -84,6 +95,17 @@
 	   (module-path (expand-file-name module-name my/.emacs.d/mods))
 	   (module-symbol (intern (format "my/%s" module-name))))
       (require module-symbol module-path nil))))
+
+(defun my/packs/leap (mods-str)
+  (interactive "sPackages: ")
+  (let ((mods (split-string mods-str " ")))
+  (dolist (mod mods)
+    (let* ((mark (assoc mod my/packs/bookmarks))
+	   (relfile (car (cdr mark)))
+	   (file (and relfile (expand-file-name relfile))))
+      (if file
+	  (find-file file)
+	(my/packs/conf mod))))))
 
 (provide 'my-packs)
 

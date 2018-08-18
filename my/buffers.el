@@ -1,4 +1,4 @@
-;;; os.el --- Helper functions for OSX.
+;;; buffers.el --- Configuration for the buffers package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,20 +19,22 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(setq mac-command-modifier 'super)
+(global-set-key (kbd "s-i") 'my/buffer/autoindent)
 
-(global-set-key (kbd "s-.") 'save-buffer)
-(global-set-key (kbd "s-2") 'my/split/dir-below)
-(global-set-key (kbd "s-3") 'my/split/dir-right)
-(global-set-key (kbd "s-4") 'my/split/dir-right-delete-other-windows)
-(global-set-key (kbd "s-b") 'bookmark-jump)
-(global-set-key (kbd "s-v") 'yank)
-(global-set-key (kbd "s-x") 'kill-region)
-(global-set-key (kbd "s-c") 'kill-ring-save)
-(global-set-key (kbd "s-J") 'previous-buffer)
-(global-set-key (kbd "s-K") 'next-buffer)
-(global-set-key (kbd "C-s-c") 'my/packs/conf)
+(defun my/buffers/clean ()
+  "Remove unmodified buffers."
+  (interactive)
+  (save-window-excursion
+    (dolist (buffer (buffer-list))
+      (and (buffer-live-p buffer)
+	   (not (buffer-modified-p buffer))
+	   (kill-buffer buffer)))))
 
-(provide 'my/os)
+(defun my/buffer/autoindent ()
+  "Autoindent the current buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
 
-;;; osx.el ends here
+(provide 'my/buffers)
+
+;;; buffers.el ends here

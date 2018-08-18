@@ -19,12 +19,13 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+(defvar evil-escape-kbd (kbd "s-n"))
+
 (use-package evil-escape
   :ensure t
   :commands evil-escape-mode
   :init
   (setq evil-escape-excluded-states '(normal visual multiedit emacs motion)
-        evil-escape-excluded-major-modes '(neotree-mode)
         evil-escape-key-sequence "jk"
         evil-escape-delay 0.25)
   (add-hook 'after-init-hook #'evil-escape-mode)
@@ -32,10 +33,10 @@
   ;; no `evil-escape' in minibuffer
   (cl-pushnew #'minibufferp evil-escape-inhibit-functions :test #'eq)
 
-  (define-key evil-insert-state-map  (kbd "C-g") #'evil-escape)
-  (define-key evil-replace-state-map (kbd "C-g") #'evil-escape)
-  (define-key evil-visual-state-map  (kbd "C-g") #'evil-escape)
-  (define-key evil-operator-state-map (kbd "C-g") #'evil-escape))
+  (define-key evil-insert-state-map  evil-escape-kbd #'evil-escape)
+  (define-key evil-replace-state-map evil-escape-kbd #'evil-escape)
+  (define-key evil-visual-state-map  evil-escape-kbd #'evil-escape)
+  (define-key evil-operator-state-map evil-escape-kbd #'evil-escape))
 
 (provide 'my/evil-escape)
 

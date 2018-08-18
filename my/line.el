@@ -21,12 +21,13 @@
 
 (global-set-key (kbd "s-d") 'my/line/dup)
 (global-set-key (kbd "s-D") 'my/line/dup-leap)
+(global-set-key (kbd "s-e") 'my/line/eval)
 
 (defun my/line/kill-left (p)
   "Kill P lines backwards"
   (interactive "p")
   (kill-line (- 1 p)))
-  
+
 (defun my/line/dup (p)
   "Duplicate the curent line N times"
   (interactive "p")
@@ -86,6 +87,13 @@
       (open-line 1)
       (next-line 1)
       (yank))))
+
+(defun my/line/eval ()
+  "Eval sexp that ends on current line"
+  (interactive)
+  (save-excursion
+    (end-of-line)
+    (eval-last-sexp nil)))
 
 (provide 'my/line)
 

@@ -20,9 +20,11 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(menu-bar-mode -1)
-(tool-bar-mode -1)
-(toggle-scroll-bar -1)
+(if (display-graphic-p)
+    (progn
+      (menu-bar-mode -1)
+      (tool-bar-mode -1)
+      (toggle-scroll-bar -1)))
 
 (provide 'my/dechrome)
 

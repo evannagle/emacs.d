@@ -1,4 +1,4 @@
-;;; os.el --- Helper functions for OSX.
+;;; dired.el --- Configuration for the dired package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,20 +19,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(setq mac-command-modifier 'super)
+(use-package dired
+  :ensure nil
+  :bind
+  ("s-k" . 'dired-up-directory)
+  ("s-j" . 'dired-find-file))
+			   
+(provide 'my/dired)
 
-(global-set-key (kbd "s-.") 'save-buffer)
-(global-set-key (kbd "s-2") 'my/split/dir-below)
-(global-set-key (kbd "s-3") 'my/split/dir-right)
-(global-set-key (kbd "s-4") 'my/split/dir-right-delete-other-windows)
-(global-set-key (kbd "s-b") 'bookmark-jump)
-(global-set-key (kbd "s-v") 'yank)
-(global-set-key (kbd "s-x") 'kill-region)
-(global-set-key (kbd "s-c") 'kill-ring-save)
-(global-set-key (kbd "s-J") 'previous-buffer)
-(global-set-key (kbd "s-K") 'next-buffer)
-(global-set-key (kbd "C-s-c") 'my/packs/conf)
-
-(provide 'my/os)
-
-;;; osx.el ends here
+;;; dired.el ends here

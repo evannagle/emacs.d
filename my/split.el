@@ -19,9 +19,6 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(global-set-key (kbd "s-2") 'my/split/dir-below)
-(global-set-key (kbd "s-3") 'my/split/dir-right)
-
 (defun my/split/dir-below ()
   "Split window vertically, open dired below."
   (interactive)
@@ -35,6 +32,12 @@
   (split-window-right)
   (other-window 1)
   (dired default-directory))
+
+(defun my/split/dir-right-delete-other-windows ()
+  "Split window vertically, delete other windows"
+  (interactive)
+  (delete-other-windows nil)
+  (my/split/dir-right))
 
 (provide 'my/split)
 
