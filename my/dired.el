@@ -21,9 +21,9 @@
 
 (use-package dired
   :ensure nil
-  :bind
-  ("s-k" . 'dired-up-directory)
-  ("s-j" . 'dired-find-file))
+  :config
+  (define-key dired-mode-map (kbd "s-k") 'dired-up-directory)
+  (define-key dired-mode-map (kbd "s-j") 'dired-find-file))
 			   
 (provide 'my/dired)
 

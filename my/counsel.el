@@ -23,9 +23,7 @@
 
 (use-package counsel
   :ensure t
-  :diminish counsel-mode
-  :config
-  (global-set-key (kbd "C-x C-f") 'counsel-find-file))
+  :diminish counsel-mode)
 
 (provide 'my/counsel)
 

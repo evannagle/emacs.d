@@ -18,10 +18,7 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
-
-(global-set-key (kbd "s-d") 'my/line/dup)
-(global-set-key (kbd "s-D") 'my/line/dup-leap)
-(global-set-key (kbd "s-e") 'my/line/eval)
+(setq-default truncate-lines 1)
 
 (defun my/line/kill-left (p)
   "Kill P lines backwards"

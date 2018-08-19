@@ -22,15 +22,6 @@
 (defvar my/org "~/Dropbox/Apps/Beorg")
 (defvar org-structure-template-alist '())
 
-;; key bindings
-(global-set-key (kbd "C-c l") 'org-store-link)
-(global-set-key (kbd "C-c a") 'org-agenda)
-(global-set-key (kbd "C-c L") 'org-insert-link-global)
-(global-set-key (kbd "C-c o") 'org-open-at-point-global)
-(global-set-key (kbd "C-c c") 'org-capture)
-(global-set-key (kbd "s-O") 'my/org/file)
-(global-set-key (kbd "M-A") 'my/org/archive-item)
-
 ;; agenda files
 (setq org-agenda-files '())
 

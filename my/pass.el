@@ -1,4 +1,4 @@
-;;; whole-line-or-region.el --- Configuration for the whole-line-or-region package
+;;; pass.el --- Configuration for the pass package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,12 +19,9 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package whole-line-or-region
-  :ensure t
-  :diminish whole-line-or-region-mode
-  :config
-  (whole-line-or-region-mode 1))
+(use-package pass
+ st-   :ensure t)
 
-(provide 'my/whole-line-or-region)
+(provide 'my/pass)
 
-;;; whole-line-or-region.el ends here
+;;; pass.el ends here

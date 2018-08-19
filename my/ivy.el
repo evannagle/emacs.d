@@ -21,9 +21,6 @@
 
 (defvar avy-styles-alist '())
 
-(global-set-key (kbd "s-s") 'swiper-all)
-(global-set-key (kbd "s-r") 'swiper-all-query-replace)
-
 (use-package ivy
   :ensure t
 
