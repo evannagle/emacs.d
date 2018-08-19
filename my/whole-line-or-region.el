@@ -19,10 +19,6 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(global-set-key (kbd "s-v") 'whole-line-or-region-yank)
-(global-set-key (kbd "s-c") 'whole-line-or-region-kill-ring-save)
-(global-set-key (kbd "s-x") 'whole-line-or-region-kill-region)
-
 (use-package whole-line-or-region
   :ensure t
   :diminish whole-line-or-region-mode

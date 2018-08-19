@@ -19,10 +19,6 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(global-set-key (kbd "s-M") 'my/screen/max)
-(global-set-key (kbd "s-L") 'my/screen/left)
-(global-set-key (kbd "s-R") 'my/screen/right)
-
 (defun my/screen/max ()
   "Maximize the screen."
   (interactive)
