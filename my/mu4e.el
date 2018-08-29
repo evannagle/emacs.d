@@ -27,17 +27,15 @@
 (require 'mu4e)
 
 ;; Folders
-(defvar
-  mu4e-maildir "~/.Mail"
-  mu4e-sent-folder "/Sent"
-  mu4e-drafts-folder "/Drafts"
-  mu4e-trash-folder "/Trash"
-  mu4e-refile-folder "/Archive")
+(defvar mu4e-maildir "~/.Mail")
+(defvar mu4e-sent-folder "/Sent")
+(defvar mu4e-drafts-folder "/Drafts")
+(defvar mu4e-trash-folder "/Trash")
+(defvar mu4e-refile-folder "/Archive")
 
 ;; Incoming Mail
-(defvar
-  mu4e-get-mail-command "offlineimap"
-  mu4e-update-interval 180)
+(defvar mu4e-get-mail-command "offlineimap")
+(defvar mu4e-update-interval 180)
 
 ;; Just a demo
 ;; Real setup is stored in private.el
