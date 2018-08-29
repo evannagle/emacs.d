@@ -19,13 +19,17 @@
 
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
 (setq package--init-file-ensured t)
 (setq my/.emacs.d/ user-emacs-directory)
 (setq my/.emacs.d/mods (expand-file-name "my" my/.emacs.d/))
 (setq my/.emacs.d/data (expand-file-name "data" my/.emacs.d/))
 (setq my/.emacs.d/init.el (expand-file-name "init.el" my/.emacs.d/))
 (setq my/packs.el (expand-file-name "packs.el" my/.emacs.d/mods))
-(setq my/org "~/Dropbox/Apps/Beorg")
+(setq my/private.el (expand-file-name "private.el" my/.emacs.d/mods))
+
+(if (file-exists-p my/private.el)
+    (load my/private.el))
 
 (load my/packs.el)
 
@@ -34,6 +38,7 @@
  'melpa
  'backups
  'buffers
+ 'bindings
  'data-tuck
  'dired
  'quiet
@@ -80,6 +85,8 @@
  'web-mode
  
  ;; esoteric
+ 'mu4e
+ ;;'keyboard2
  'hours)
 
 ;;; init.el ends here

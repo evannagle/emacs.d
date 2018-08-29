@@ -26,8 +26,14 @@
 (setq org-agenda-files '())
 
 (add-to-list 'org-agenda-files (expand-file-name "todo.org" my/org))
-(add-to-list 'org-agenda-files (expand-file-name "learn.org" my/org))
-(add-to-list 'org-agenda-files (expand-file-name "links.org" my/org))
+(add-to-list 'org-agenda-files (expand-file-name "learn/learn.org" my/org))
+(add-to-list 'org-agenda-files (expand-file-name "learn/links.org" my/org))
+
+(setq org-refile-targets '((nil :maxlevel . 9)
+                                (org-agenda-files :maxlevel . 9)))
+(setq org-outline-path-complete-in-steps nil) 
+(setq org-refile-use-outline-path t)         
+
 
 ;; org flags
 (setq org-log-done t)
