@@ -42,7 +42,6 @@
 (global-set-key (kbd "s-m") 'mu4e)
 (global-set-key (kbd "s-O") 'my/org/file)
 (global-set-key (kbd "s-r") 'swiper-all-query-replace)
-(global-set-key (kbd "s-R") 'my/screen/right)
 (global-set-key (kbd "s-s") 'swiper-all)
 (global-set-key (kbd "s-q") 'save-buffers-kill-terminal)
 (global-set-key (kbd "s-v") 'whole-line-or-region-yank)

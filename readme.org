@@ -9,9 +9,9 @@ There are many like it, but this one is mine.
 - [[https://github.com/cjohansen/.emacs.d][@cjohansen/emacs.d]]
 - [[https://github.com/skeeto/.emacs.d][@skeeto/.emacs.d]]
 - [[https://github.com/jonnycyr/.emacs.d][@jonnycyr/.emacs.d]]
-- [[https://github.com/rakanalh/dotemacs]][@rakanalh/dotemacs]]
-- [[https://github.com/ubolonton/.emacs.d]][@ubolonton/.emacs.d]]
-- [[https://github.com/PythonNut/emacs-config]][@PythonNut/emacs-config]]
+- [[https://github.com/rakanalh/dotemacs][@rakanalh/dotemacs]]
+- [[https://github.com/ubolonton/.emacs.d][@ubolonton/.emacs.d]]
+- [[https://github.com/PythonNut/emacs-config][@PythonNut/emacs-config]]
 
 ** Quick Setup
 
@@ -21,6 +21,45 @@ The only required MELPA plugin is the [[https://github.com/jwiegley/use-package]
 ;; M-x package-install RET use-package RET
 (package-install "use-package")
 #+END_SRC
+
+** My keybindings
+
+All of my custom keybindings in my/bindings.el. Type M-x my/packs/conf RET bindings
+
+I make heavy use of Mac's super key as to avoid unnecessary C-* prefixes.
+
+|---------+-----------------------------------------+------------------------------------------------------------------------------------|
+| Binding | Function                                | Description                                                                        |
+|---------+-----------------------------------------+------------------------------------------------------------------------------------|
+| s-ESC   | keyboard-escape-quit                    |                                                                                    |
+| s-.     | save-buffer                             |                                                                                    |
+| s-0     | delete-window                           |                                                                                    |
+| s-1     | delete-other-windows                    |                                                                                    |
+| s-2     | my/split/dir-below                      | Split window and show current file's parent dirin bottom window                    |
+| s-3     | my/split/dir-right                      | Split window and show current file's parent dir in right window                    |
+| s-4     | my/split/dir-right-delete-other-windows | Delete all windows excape current file, show file's parent dir in new right window |
+| s-b     | bookmark-jump                           |                                                                                    |
+| s-c     | whole-line-or-region-kill-ring-save     |                                                                                    |
+| s-d     | my/line/dup                             | Copy the current line and paste it on the line below                               |
+| s-D     | my/line/dup-leap                        | Copy line N and paste it below the current line                                    |
+| s-e     | my/line/eval                            |                                                                                    |
+| s-f     | projectile-find-file                    |                                                                                    |
+| s-g     | ag                                      |                                                                                    |
+| s-i     | my/buffer/autoindent                    | Auto-indents the current file                                                      |
+| s-j     | ivy-switch-buffer                       |                                                                                    |
+| s-J     | previous-buffer                         |                                                                                    |
+| s-k     | dired                                   |                                                                                    |
+| s-K     | next-buffer                             |                                                                                    |
+| s-n     | mu4e-compose-new                        |                                                                                    |
+| s-m     | mu4e                                    |                                                                                    |
+| s-O     | my/org/file                             |                                                                                    |
+| s-r     | swiper-all-query-replace                |                                                                                    |
+| s-R     | my/screen/right                         |                                                                                    |
+| s-s     | swiper-all                              |                                                                                    |
+| s-q     | save-buffers-kill-terminal              |                                                                                    |
+| s-v     | whole-line-or-region-yank               |                                                                                    |
+| s-x     | whole-line-or-region-kill               |                                                                                    |
+|---------+-----------------------------------------+------------------------------------------------------------------------------------|
 
 ** Hand me my/packs
 
@@ -38,14 +77,7 @@ This will install the package and also autogenerate a configuration file, which 
 (my/packs/conf 'rainbow-delimiters)
 #+END_SRC
 
-Packages can be activated/deactivated manually. This seems unnecessary.
-
-#+BEGIN_SRC emacs-lisp
-;; M-x my/packs/load RET rainbow-delimiters
-(my/packs/load 'rainbow-delimiters)
-#+END_SRC
-
-Or you can add the package to init.el:
+Add packages you want to autoload in init.el:
 
 #+BEGIN_SRC emacs-lisp
 (my/packs/load
