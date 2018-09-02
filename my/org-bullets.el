@@ -22,7 +22,8 @@
 (use-package org-bullets
   :ensure t
   :init
-  (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))
+  (if (display-graphic-p)
+      (add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
 
 (provide 'my/org-bullets)
 

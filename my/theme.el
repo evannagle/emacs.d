@@ -21,8 +21,14 @@
 
 (setq custom-theme-directory (expand-file-name "themes" user-emacs-directory))
 
+(defvar my/theme/graphic 'dracula)
+(defvar my/theme/terminal 'material-elvis)
+
 (set-frame-font "Menlo-12" t t)
-(load-theme 'dracula)
+
+(if (display-graphic-p)
+    (load-theme my/theme/graphic)
+  (load-theme my/theme/terminal))
 
 (provide 'my/theme)
 

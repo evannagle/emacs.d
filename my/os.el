@@ -20,6 +20,7 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 (setq mac-command-modifier 'super)
+(setq dired-use-ls-dired nil)
 
 (provide 'my/os)
 

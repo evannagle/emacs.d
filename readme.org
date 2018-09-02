@@ -90,9 +90,3 @@ Add packages you want to autoload in init.el:
  'hours)
 #+END_SRC
 
-
-
-
-
-
-

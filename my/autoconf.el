@@ -29,7 +29,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
    (quote
-    ("766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" default)))
+    ("f540efec38befb1a2f37e98831d9ba5b8cc495b4dea75c499dfbe7d8c594be9d" "766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" default)))
  '(epg-gpg-program "/usr/local/Cellar/gnupg/2.2.3/bin/gpg")
  '(mac-option-modifier (quote (:ordinary meta :function meta :mouse meta)))
  '(package-selected-packages
