@@ -34,6 +34,10 @@
 
 (use-package evil
   :ensure t
+  :init
+  ;;https://github.com/emacs-evil/evil-collection
+  (setq evil-want-integration nil)
+  
   :config
   (evil-mode 1)
   (my/evil/commands/load)

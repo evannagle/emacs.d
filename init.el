@@ -57,6 +57,8 @@
  
  ;; for the vi-afflicted
  'evil
+ 'evil-magit
+ 'evil-collection
  'evil-escape
  
  ;; core elpa plugs
@@ -86,7 +88,6 @@
  
  ;; esoteric
  'mu4e
- ;;'keyboard2
  'hours)
 
 ;;; init.el ends here

@@ -39,6 +39,7 @@
 (global-set-key (kbd "s-K") 'next-buffer)
 (global-set-key (kbd "s-k") (lambda () (interactive) (dired nil)))
 (global-set-key (kbd "s-n") 'mu4e-compose-new)
+(global-set-key (kbd "s-m") 'mu4e)
 (global-set-key (kbd "s-O") 'my/org/file)
 (global-set-key (kbd "s-r") 'swiper-all-query-replace)
 (global-set-key (kbd "s-R") 'my/screen/right)
