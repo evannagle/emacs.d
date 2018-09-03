@@ -33,7 +33,9 @@
     (kbd (format "%s %s" my/bindings/terminal-super key))))
 
 (global-set-key (my/sbd "<escape>") 'keyboard-escape-quit)
+(global-set-key (my/sbd "-") 'my/shell-cmd/run)
 (global-set-key (my/sbd ".") 'save-buffer)
+(global-set-key (my/sbd ">") 'my/web/save-buffer)
 (global-set-key (my/sbd "0") 'delete-window)
 (global-set-key (my/sbd "1") 'delete-other-windows)
 (global-set-key (my/sbd "2") 'my/split/dir-below)

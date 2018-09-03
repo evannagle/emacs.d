@@ -28,11 +28,6 @@
 (add-to-list 'my/packs/bookmarks `("e" ,my/.emacs.d/))
 (add-to-list 'my/packs/bookmarks `("i" ,my/.emacs.d/init.el))
 
-(defun my/packs/init ()
-  "Find the init.el file where packs are loaded."
-  (interactive)
-  (find-file my/.emacs.d/init.el))
-
 (defun my/packs/ensure (package)
   "Ensure that a package has been installed"
   (unless (require package nil 'noerror)

@@ -44,7 +44,6 @@
  'quiet
  'dechrome
  'screen
- 'os
  'line
  'nums
  'gpg
@@ -54,6 +53,11 @@
  'slime
  'speed
  'exec-path-from-shell
+ 
+ ;; os specific
+ 'os
+ 'shell
+ 'shell-cmd
  
  ;; for the vi-afflicted
  'evil
@@ -88,6 +92,7 @@
  
  ;; esoteric
  'mu4e
- 'hours)
+ 'hours
+ 'web)
 
 ;;; init.el ends here
