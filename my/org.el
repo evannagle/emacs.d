@@ -25,7 +25,8 @@
 ;; agenda files
 (setq org-agenda-files '())
 
-(add-to-list 'org-agenda-files (expand-file-name "todo.org" my/org))
+(add-to-list 'org-agenda-files (expand-file-name "agenda.org" my/org))
+(add-to-list 'org-agenda-files (expand-file-name "tasks.org" my/org))
 (add-to-list 'org-agenda-files (expand-file-name "learn/learn.org" my/org))
 (add-to-list 'org-agenda-files (expand-file-name "learn/links.org" my/org))
 
