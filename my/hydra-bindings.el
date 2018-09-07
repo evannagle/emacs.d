@@ -29,7 +29,9 @@
   ("k" (my/web/select-tab 6))
   ("l" (my/web/select-tab 7))
   (";" (my/web/select-tab 8))
-  ("r" (my/web/refresh)))
+  ("r" (my/web/refresh))
+  ("x" (my/web/delete-tab))
+  ("/" my/web/search))
 
 (provide 'my/hydra-bindings)
 

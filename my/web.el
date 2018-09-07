@@ -19,6 +19,11 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+(defun my/web/delete-tab ()
+  "Delete the currently active tab."
+  (interactive)
+  (my/shell-cmd/pick-and-run "chrome-delete-tab"))
+
 (defun my/web/refresh ()
   "Refresh the active Chrome tab."
   (interactive)
@@ -36,6 +41,11 @@
   "Select a Chrome tab."
   (interactive "p")
   (my/shell-cmd/pick-and-run "chrome-set-tab" p))
+
+(defun my/web/search (query)
+  "Search the web"
+  (interactive "sSearch: ")
+  (browse-url (format "https://www.google.com/search?q=%s" query)))
 
 (provide 'my/web)
 
