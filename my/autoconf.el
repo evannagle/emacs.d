@@ -32,9 +32,29 @@
     ("f540efec38befb1a2f37e98831d9ba5b8cc495b4dea75c499dfbe7d8c594be9d" "766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" default)))
  '(epg-gpg-program "/usr/local/Cellar/gnupg/2.2.3/bin/gpg")
  '(mac-option-modifier (quote (:ordinary meta :function meta :mouse meta)))
+ '(org-agenda-custom-commands
+   (quote
+    (("n" "Agenda and all TODOs"
+      ((agenda "" nil)
+       (alltodo "" nil))
+      nil)
+     ("z" "Next items on agenda "
+      ((tags "URGENT"
+	     ((org-agenda-overriding-header "Urgent Tasks")))
+       (todo "NEXT"
+	     ((org-agenda-overriding-header "Next Tasks on Agenda")))
+       (agenda ""
+	       ((org-deadline-warning-days 2)
+		(org-agenda-span
+		 (quote day))
+		(org-agenda-overriding-header "Upcoming Deadlines"))))
+      nil nil))))
+ '(org-agenda-files
+   (quote
+    ("/Users/evannagle/Dropbox/Apps/Beorg/learn/learn.org" "/Users/evannagle/Dropbox/Apps/Beorg/tasks.org" "/Users/evannagle/Dropbox/Apps/Beorg/agenda.org")))
  '(package-selected-packages
    (quote
-    (evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
+    (hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

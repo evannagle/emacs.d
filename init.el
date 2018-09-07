@@ -38,7 +38,6 @@
  'melpa
  'backups
  'buffers
- 'bindings
  'data-tuck
  'dired
  'quiet
@@ -78,12 +77,17 @@
  'expand-region
  'elisp-def
  'helpful
+ 'hydra
  'magit
  'org-bullets
  'projectile
  'rainbow-delimiters
  'split
 
+ ;; bindings
+ 'bindings
+ 'hydra-bindings
+ 
  ;; modes
  'gitignore-mode
  'less-css-mode

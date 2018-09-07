@@ -1,4 +1,4 @@
-;;; web.el --- Configuration for the web package
+;;; hydra.el --- Configuration for the hydra package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,24 +19,9 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defun my/web/refresh ()
-  "Refresh the active Chrome tab."
-  (interactive)
-  (my/shell-cmd/pick-and-run "chrome-refresh"))
+(use-package hydra
+    :ensure t)
 
-(defun my/web/save-buffer ()
-  "Auto-indent file, save, and refresh browser"
-  (interactive)
-  (evil-normal-state)
-  (my/buffer/autoindent)
-  (save-buffer)
-  (my/web/refresh))
+(provide 'my/hydra)
 
-(defun my/web/select-tab (p)
-  "Select a Chrome tab."
-  (interactive "p")
-  (my/shell-cmd/pick-and-run "chrome-set-tab" p))
-
-(provide 'my/web)
-
-;;; web.el ends here
+;;; hydra.el ends here

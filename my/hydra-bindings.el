@@ -1,4 +1,4 @@
-;;; web.el --- Configuration for the web package
+;;; hydra-bindings.el --- Configuration for the hydra-bindings package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,24 +19,18 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defun my/web/refresh ()
-  "Refresh the active Chrome tab."
-  (interactive)
-  (my/shell-cmd/pick-and-run "chrome-refresh"))
+(defhydra hydra-chrome-tab (global-map "<f2>")
+  "Chrome Tab"
+  ("a" (my/web/select-tab 1))
+  ("s" (my/web/select-tab 2))
+  ("d" (my/web/select-tab 3))
+  ("f" (my/web/select-tab 4))
+  ("j" (my/web/select-tab 5))
+  ("k" (my/web/select-tab 6))
+  ("l" (my/web/select-tab 7))
+  (";" (my/web/select-tab 8))
+  ("r" (my/web/refresh)))
 
-(defun my/web/save-buffer ()
-  "Auto-indent file, save, and refresh browser"
-  (interactive)
-  (evil-normal-state)
-  (my/buffer/autoindent)
-  (save-buffer)
-  (my/web/refresh))
+(provide 'my/hydra-bindings)
 
-(defun my/web/select-tab (p)
-  "Select a Chrome tab."
-  (interactive "p")
-  (my/shell-cmd/pick-and-run "chrome-set-tab" p))
-
-(provide 'my/web)
-
-;;; web.el ends here
+;;; hydra-bindings.el ends here

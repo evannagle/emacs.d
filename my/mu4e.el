@@ -25,6 +25,7 @@
 (add-to-list 'load-path my/mu4e)
 
 (require 'mu4e)
+(require 'org-mu4e)
 
 ;; Folders
 (defvar mu4e-maildir "~/.Mail")

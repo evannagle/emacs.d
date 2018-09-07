@@ -41,16 +41,20 @@
   (let ((script (message "%s" (ivy-completing-read "Script: " (my/shell-cmd/list dir)))))
     (concat dir "/" script ".sh")))
 
-(defun my/shell-cmd/run (&optional script)
+(defun my/shell-cmd/run (&optional script argv)
   "Run a shell script"
   (interactive)
   (unless script
       (setq script (my/shell-cmd/pick my/shell-cmd/dir)))
+  (unless argv
+    (setq argv ""))
+  (setq script (format "%s %s" script argv))
+  (message script)
   (shell-command-to-string script))
    
-(defun my/shell-cmd/pick-and-run (script)
+(defun my/shell-cmd/pick-and-run (script &optional argv)
   (setq script (concat my/shell-cmd/dir "/" script ".sh"))
-  (my/shell-cmd/run script))
+  (my/shell-cmd/run script argv))
 
 (provide 'my/shell-cmd)
 

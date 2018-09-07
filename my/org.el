@@ -28,13 +28,14 @@
 (add-to-list 'org-agenda-files (expand-file-name "agenda.org" my/org))
 (add-to-list 'org-agenda-files (expand-file-name "tasks.org" my/org))
 (add-to-list 'org-agenda-files (expand-file-name "learn/learn.org" my/org))
-(add-to-list 'org-agenda-files (expand-file-name "learn/links.org" my/org))
 
 (setq org-refile-targets '((nil :maxlevel . 9)
                                 (org-agenda-files :maxlevel . 9)))
 (setq org-outline-path-complete-in-steps nil) 
 (setq org-refile-use-outline-path t)         
 
+;; https://www.youtube.com/watch?v=nUvdddKZQzs&index=9&list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE
+(setq org-log-into-drawer "LOGBOOK")
 
 ;; org flags
 (setq org-log-done t)
