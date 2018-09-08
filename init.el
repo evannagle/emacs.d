@@ -83,10 +83,6 @@
  'projectile
  'rainbow-delimiters
  'split
-
- ;; bindings
- 'bindings
- 'hydra-bindings
  
  ;; modes
  'gitignore-mode
@@ -97,6 +93,10 @@
  ;; esoteric
  'mu4e
  'hours
- 'web)
+ 'web
+
+ ;; bindings
+ 'bindings
+ 'hydra-bindings)
 
 ;;; init.el ends here
