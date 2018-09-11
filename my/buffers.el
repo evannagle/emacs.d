@@ -28,11 +28,6 @@
 	   (not (buffer-modified-p buffer))
 	   (kill-buffer buffer)))))
 
-(defun my/buffer/autoindent ()
-  "Autoindent the current buffer."
-  (interactive)
-  (indent-region (point-min) (point-max)))
-
 (provide 'my/buffers)
 
 ;;; buffers.el ends here

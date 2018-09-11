@@ -50,7 +50,7 @@ I make heavy use of Mac's super key as to avoid unnecessary C-* prefixes.
 | s-e     | my/line/eval                            |                                                                                    |
 | s-f     | projectile-find-file                    |                                                                                    |
 | s-g     | ag                                      |                                                                                    |
-| s-i     | my/buffer/autoindent                    | Auto-indents the current file                                                      |
+| s-i     | my/web/autoindent                       | Auto-indents the current file                                                      |
 | s-j     | ivy-switch-buffer                       |                                                                                    |
 | s-J     | previous-buffer                         |                                                                                    |
 | s-k     | dired                                   |                                                                                    |

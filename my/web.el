@@ -24,6 +24,11 @@
   (interactive)
   (my/shell-cmd/pick-and-run "chrome-delete-tab"))
 
+(defun my/web/autoindent ()
+  "Autoindent the current buffer."
+  (interactive)
+  (indent-region (point-min) (point-max)))
+
 (defun my/web/refresh ()
   "Refresh the active Chrome tab."
   (interactive)
@@ -33,7 +38,7 @@
   "Auto-indent file, save, and refresh browser"
   (interactive)
   (evil-normal-state)
-  (my/buffer/autoindent)
+  (my/web/autoindent)
   (save-buffer)
   (my/web/refresh))
 
