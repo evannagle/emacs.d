@@ -50,6 +50,7 @@
  'org
  'abbrevs
  'slime
+ 'smartparens
  'speed
  'exec-path-from-shell
  
@@ -63,6 +64,7 @@
  'evil-magit
  'evil-collection
  'evil-escape
+ 'evil-smartparens
  
  ;; core elpa plugs
  'ace-window

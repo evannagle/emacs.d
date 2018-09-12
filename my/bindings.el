@@ -36,6 +36,10 @@
 (global-set-key (my/sbd "-") 'my/shell-cmd/run)
 (global-set-key (my/sbd ".") 'save-buffer)
 (global-set-key (my/sbd ">") 'my/web/save-buffer)
+(global-set-key (my/sbd "[") 'sp-forward-barf-sexp)
+(global-set-key (my/sbd "]") 'sp-forward-slurp-sexp)
+(global-set-key (my/sbd "{") 'sp-backward-slurp-sexp)
+(global-set-key (my/sbd "}") 'sp-backward-barf-sexp)
 (global-set-key (my/sbd "0") 'delete-window)
 (global-set-key (my/sbd "1") 'delete-other-windows)
 (global-set-key (my/sbd "2") 'my/split/dir-below)
@@ -74,12 +78,19 @@
 (global-set-key (kbd "C-c o") 'org-open-at-point-global)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; org mode
 (add-hook 'org-mode-hook
 	  '(lambda ()
 	     (define-key org-mode-map (my/sbd "r") 'org-refile)
 	     (define-key org-mode-map (my/sbd "x") 'my/org/archive-item)
 	     (define-key org-mode-map (my/sbd "e") 'org-ctrl-c-ctrl-c)))
-;;; osx.el ends here
+
+;; smartparens
+(add-hook 'smartparens-mode-hook
+	  '(lambda ()
+	     (define-key smartparens-mode-map (kbd "M-(") 'sp-wrap-round)
+	     (define-key smartparens-mode-map (kbd "M-[") 'sp-wrap-square)
+	     (define-key smartparens-mode-map (kbd "M-{") 'sp-wrap-curly)))
 
 (provide 'my/bindings)
 
