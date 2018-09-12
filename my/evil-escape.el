@@ -19,15 +19,15 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defvar evil-escape-kbd (kbd "s-n"))
 
 (use-package evil-escape
   :ensure t
   :commands evil-escape-mode
   :init
+  (setq evil-escape-kbd (kbd "s-n"))
   (setq evil-escape-excluded-states '(normal visual multiedit emacs motion)
         evil-escape-key-sequence "jk"
-        evil-escape-delay 0.25)
+        evil-escape-delay 0.2)
   (add-hook 'after-init-hook #'evil-escape-mode)
   :config
   ;; no `evil-escape' in minibuffer

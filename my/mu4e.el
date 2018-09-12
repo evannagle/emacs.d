@@ -20,11 +20,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defvar my/mu4e "/usr/local/share/emacs/site-lisp/mu/mu4e")
+(defvar my/mu4e "/usr/local/Cellar/mu/1.0/share/emacs/site-lisp/mu/mu4e")
 
 (add-to-list 'load-path my/mu4e)
 
 (require 'mu4e)
+(require 'mu4e-contrib)
 (require 'org-mu4e)
 
 ;; Folders
@@ -35,8 +36,11 @@
 (defvar mu4e-refile-folder "/Archive")
 
 ;; Incoming Mail
-(defvar mu4e-get-mail-command "offlineimap")
-(defvar mu4e-update-interval 180)
+(setq mu4e-get-mail-command "offlineimap")
+(setq mu4e-update-interval 180)
+(setq mu4e-html2text-command 'mu4e-shr2text)
+(setq shr-color-visible-luminance-min 80)
+(setq shr-color-visible-distance-min 5)
 
 ;; Just a demo
 ;; Real setup is stored in private.el
@@ -81,7 +85,6 @@
 
 (setq message-send-mail-function 'smtpmail-send-it)
 (setq smtpmail-smtp-server "smtp.gmail.com")
-
 (setq mu4e-sent-messages-behavior 'delete)
 
 (provide 'my/mu4e)
