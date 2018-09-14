@@ -22,7 +22,8 @@
 (use-package evil-smartparens
   :ensure t
   :config
-  (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode))
+  (add-hook 'smartparens-enabled-hook #'evil-smartparens-mode)
+  (sp-pair "=" nil :actions :rem))
 
 (provide 'my/evil-smartparens)
 

@@ -28,6 +28,20 @@
 	   (not (buffer-modified-p buffer))
 	   (kill-buffer buffer)))))
 
+(defun my/buffers/revert-current ()
+  "Kill and reload the current buffer"
+  "Revert buffer without confirmation."
+  (interactive)
+  (revert-buffer :ignore-auto :noconfirm))
+
+
+(defun my/buffers/reload-current ()
+  "Kill and reload the current buffer"
+  "Reload buffer without confirmation."
+  (interactive)
+  (save-buffer)
+  (my/buffers/revert-current))
+
 (provide 'my/buffers)
 
 ;;; buffers.el ends here

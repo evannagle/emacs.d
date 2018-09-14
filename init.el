@@ -52,6 +52,7 @@
  'slime
  'smartparens
  'speed
+ 'tabs
  'exec-path-from-shell
  
  ;; os specific
