@@ -82,7 +82,7 @@
 ;; org mode
 (add-hook 'org-mode-hook
 	  '(lambda ()
-	     (define-key org-mode-map (my/sbd "r") 'org-refile)
+	     (define-key org-mode-map (kbd "C-c r") 'org-refile)
 	     (define-key org-mode-map (my/sbd "x") 'my/org/archive-item)
 	     (define-key org-mode-map (my/sbd "e") 'org-ctrl-c-ctrl-c)))
 

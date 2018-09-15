@@ -29,9 +29,11 @@
 (add-to-list 'org-agenda-files (expand-file-name "tasks.org" my/org))
 (add-to-list 'org-agenda-files (expand-file-name "learn/learn.org" my/org))
 
+(setq org-enforce-todo-dependencies t)
+(setq org-outline-path-complete-in-steps nil) 
+(setq org-track-ordered-property-with-tag t)
 (setq org-refile-targets '((nil :maxlevel . 9)
                                 (org-agenda-files :maxlevel . 9)))
-(setq org-outline-path-complete-in-steps nil) 
 (setq org-refile-use-outline-path t)         
 
 ;; https://www.youtube.com/watch?v=nUvdddKZQzs&index=9&list=PLVtKhBrRV_ZkPnBtt_TD1Cs9PJlU0IIdE
