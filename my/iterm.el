@@ -1,4 +1,4 @@
-;;; dired.el --- Configuration for the dired package
+;;; iterm.el --- Configuration for the iterm package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,11 +19,11 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package dired
-  :ensure nil
-  :config
-  (define-key dired-mode-map (kbd "s-k") 'dired-up-directory))
-			   
-(provide 'my/dired)
+(defun my/iterm/rerun ()
+  "Refresh the active Chrome tab."
+  (interactive)
+  (my/shell-cmd/pick-and-run "iterm-rerun"))
 
-;;; dired.el ends here
+(provide 'my/iterm)
+
+;;; iterm.el ends here

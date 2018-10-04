@@ -54,7 +54,7 @@
     ("/Users/evannagle/Dropbox/Apps/Beorg/learn/learn.org" "/Users/evannagle/Dropbox/Apps/Beorg/tasks.org" "/Users/evannagle/Dropbox/Apps/Beorg/agenda.org")))
  '(package-selected-packages
    (quote
-    (evil-smartparens smartparens hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
+    (fzf jinja2-mode evil-smartparens smartparens hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.

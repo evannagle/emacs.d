@@ -40,6 +40,7 @@
 (global-set-key (my/sbd "]") 'sp-forward-slurp-sexp)
 (global-set-key (my/sbd "{") 'sp-backward-slurp-sexp)
 (global-set-key (my/sbd "}") 'sp-backward-barf-sexp)
+(global-set-key (my/sbd "_") 'my/iterm/rerun)
 (global-set-key (my/sbd "0") 'delete-window)
 (global-set-key (my/sbd "1") 'delete-other-windows)
 (global-set-key (my/sbd "2") 'my/split/dir-below)
@@ -66,6 +67,7 @@
 (global-set-key (my/sbd "q") 'save-buffers-kill-terminal)
 (global-set-key (my/sbd "v") 'whole-line-or-region-yank)
 (global-set-key (my/sbd "x") 'whole-line-or-region-kill-region)
+
 
 (global-set-key (kbd "M-A") 'my/org/archive-item)
 (global-set-key (kbd "C-s-c") 'my/packs/conf)

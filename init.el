@@ -57,6 +57,7 @@
  
  ;; os specific
  'os
+ 'iterm
  'shell
  'shell-cmd
  
