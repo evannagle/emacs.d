@@ -43,6 +43,7 @@
  'quiet
  'dechrome
  'screen
+ 'fzf
  'line
  'nums
  'gpg
