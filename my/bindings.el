@@ -36,6 +36,7 @@
 (global-set-key (my/sbd "-") 'my/shell-cmd/run)
 (global-set-key (my/sbd ".") 'save-buffer)
 (global-set-key (my/sbd ">") 'my/web/save-buffer)
+(global-set-key (my/sbd "/") 'evil-commentary-line)
 (global-set-key (my/sbd "[") 'sp-forward-barf-sexp)
 (global-set-key (my/sbd "]") 'sp-forward-slurp-sexp)
 (global-set-key (my/sbd "{") 'sp-backward-slurp-sexp)
