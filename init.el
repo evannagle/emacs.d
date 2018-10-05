@@ -68,7 +68,6 @@
  'evil-collection
  'evil-escape
  'evil-magit
- 'evil-smartparens
  'evil-surround
  
  ;; core elpa plugs

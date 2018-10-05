@@ -20,7 +20,10 @@
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 (use-package evil-surround
-    :ensure t)
+  :ensure t
+  :diminish t
+  :config
+  (global-evil-surround-mode 1))
 
 (provide 'my/evil-surround)
 
