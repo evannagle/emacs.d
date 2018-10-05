@@ -19,6 +19,13 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+(defun my/buffers/kill-quick ()
+  "Save buffer if needed and kill it."
+  (interactive)
+  (if (buffer-modified-p)
+      (save-buffer))
+  (kill-buffer nil))
+
 (defun my/buffers/clean ()
   "Remove unmodified buffers."
   (interactive)

@@ -40,6 +40,7 @@
 (global-set-key (my/sbd "]") 'sp-forward-slurp-sexp)
 (global-set-key (my/sbd "{") 'sp-backward-slurp-sexp)
 (global-set-key (my/sbd "}") 'sp-backward-barf-sexp)
+(global-set-key (my/sbd ")") 'my/buffers/kill-quick)
 (global-set-key (my/sbd "_") 'my/iterm/rerun)
 (global-set-key (my/sbd "0") 'delete-window)
 (global-set-key (my/sbd "1") 'delete-other-windows)

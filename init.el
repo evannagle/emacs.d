@@ -64,10 +64,12 @@
  
  ;; for the vi-afflicted
  'evil
- 'evil-magit
+ 'evil-commentary
  'evil-collection
  'evil-escape
+ 'evil-magit
  'evil-smartparens
+ 'evil-surround
  
  ;; core elpa plugs
  'ace-window
