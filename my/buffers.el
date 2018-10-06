@@ -49,6 +49,16 @@
   (save-buffer)
   (my/buffers/revert-current))
 
+(defun my/buffers/switch-to-scratch ()
+  "Open the scratch buffer"
+  (interactive)
+  (switch-to-buffer "*scratch*"))
+
+(defun my/buffers/switch-to-messages ()
+  "Open the messages buffer"
+  (interactive)
+  (switch-to-buffer "*Messages*"))
+
 (provide 'my/buffers)
 
 ;;; buffers.el ends here
