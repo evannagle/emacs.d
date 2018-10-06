@@ -37,9 +37,10 @@
   :init
   ;;https://github.com/emacs-evil/evil-collection
   (setq evil-want-integration nil)
-  
+
   :config
   (evil-mode 1)
+  (setq evil-want-fine-undo t)
   (my/evil/commands/load)
   (define-key evil-insert-state-map (kbd "C-n") 'next-line)
   (define-key evil-insert-state-map (kbd "C-p") 'previous-line)
