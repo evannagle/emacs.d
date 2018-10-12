@@ -51,7 +51,6 @@
  'org
  'abbrevs
  'slime
- 'smartparens
  'speed
  'tabs
  'exec-path-from-shell
@@ -91,9 +90,11 @@
  'split
  
  ;; modes
+ 'flex-mode
  'gitignore-mode
  'less-css-mode
  'php-mode
+ 'twig-mode
  'web-mode
  
  ;; esoteric
