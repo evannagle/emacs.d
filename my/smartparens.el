@@ -27,6 +27,9 @@
   :config
   (progn
     (require 'smartparens-config)
+    (sp-pair "\`" nil :actions :rem)
+    (sp-pair "\~" nil :actions :rem)
+    (sp-pair "\*" nil :actions :rem)
     (smartparens-global-mode 1)))
 
 (provide 'my/smartparens)

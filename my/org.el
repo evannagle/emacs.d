@@ -31,6 +31,7 @@
 
 (setq org-enforce-todo-dependencies t)
 (setq org-outline-path-complete-in-steps nil) 
+(setq org-src-tab-acts-natively t)
 (setq org-track-ordered-property-with-tag t)
 (setq org-refile-targets '((nil :maxlevel . 9)
                                 (org-agenda-files :maxlevel . 9)))
