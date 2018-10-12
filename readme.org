@@ -17,6 +17,7 @@ There are many like it, but this one is mine.
 - [[https://github.com/rakanalh/dotemacs][@rakanalh/dotemacs]]
 - [[https://github.com/ubolonton/.emacs.d][@ubolonton/.emacs.d]]
 - [[https://github.com/PythonNut/emacs-config][@PythonNut/emacs-config]]
+- [[https://github.com/chrisbarrett/.emacs.d][@chrisbarrett/.emacs.d]]  
 
 ** Quick Setup
 
