@@ -87,10 +87,10 @@
  'org-bullets
  'projectile
  'rainbow-delimiters
+ 'smartparens
  'split
  
  ;; modes
- 'flex-mode
  'gitignore-mode
  'less-css-mode
  'php-mode
@@ -98,6 +98,7 @@
  'web-mode
  
  ;; esoteric
+ 'flex
  'mu4e
  'hours
  'web

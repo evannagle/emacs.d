@@ -1,4 +1,4 @@
-;;; bison-mode.el --- Configuration for the bison-mode package
+;;; flex.el --- Configuration for the flex package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,9 +19,8 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package bison-mode
-    :ensure t)
+(add-to-list 'auto-mode-alist '("\\.l\\'" . c-mode))
 
-(provide 'my/bison-mode)
+(provide 'my/flex)
 
-;;; bison-mode.el ends here
+;;; flex.el ends here
