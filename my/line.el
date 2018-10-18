@@ -31,6 +31,17 @@
   (move-beginning-of-line 1)
   (my/line/dup-right p))
 
+(defun my/line/new-line-and-indent ()
+  "Add two newlines and put the cursor at the right indentation between them if a newline is
+attempted when the cursor is between two curly braces, otherwise do a regular newline-and-indent"
+  (interactive)
+  (if (and (equal (char-before) 123)
+	   (equal (char-after) 125))
+      (progn (newline-and-indent)
+	     (split-line)
+	     (indent-for-tab-command))
+    (newline-and-indent)))
+
 (defun my/line/dup-leap (p n)
   "Duplicate line N of the the current file P times"
   (interactive "p\nnLine: ")
