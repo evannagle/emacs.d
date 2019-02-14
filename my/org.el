@@ -56,6 +56,7 @@
    (js . t)
    (perl . t)
    (python . t)
+   (sed . t) ;; used to be (sh .t )
    (shell . t) ;; used to be (sh .t )
    (sql . t)))
 
@@ -82,6 +83,8 @@
 (my/org/add-template "B" "sh")
 (my/org/add-template "E" "emacs-lisp")
 (my/org/add-template "P" "perl")
+(my/org/add-template "V" "viml")
+(my/org/add-template "S" "sed")
 (my/org/add-template "W" "awk")
 
 (provide 'my/org)

@@ -95,9 +95,12 @@
  'twig-mode
  'web-mode
  
+ ;; php
+ 'php-docs
+ 
  ;; esoteric
  'flex
- 'mu4e
+ ;;'mu4e
  'hours
  'web
 
@@ -106,3 +109,4 @@
  'hydra-bindings)
 
 ;;; init.el ends here
+(put 'dired-find-alternate-file 'disabled nil)
