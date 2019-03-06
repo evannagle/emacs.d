@@ -94,6 +94,7 @@
  'php-mode
  'twig-mode
  'web-mode
+ 'typescript-mode
  
  ;; php
  'php-docs
