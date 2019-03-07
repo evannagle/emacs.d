@@ -31,6 +31,15 @@
   (move-beginning-of-line 1)
   (my/line/dup-right p))
 
+(defun my/line/hungry-new-line-and-indent ()
+  "Add two newlines and put the cursor at the right indentation between them if a newline is
+attempted when the cursor is between two curly braces, otherwise do a regular newline-and-indent"
+  (interactive)
+  (progn (newline-and-indent)
+	 (split-line)
+	 (indent-for-tab-command))
+  (newline-and-indent))
+
 (defun my/line/new-line-and-indent ()
   "Add two newlines and put the cursor at the right indentation between them if a newline is
 attempted when the cursor is between two curly braces, otherwise do a regular newline-and-indent"
