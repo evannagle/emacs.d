@@ -37,8 +37,7 @@ attempted when the cursor is between two curly braces, otherwise do a regular ne
   (interactive)
   (progn (newline-and-indent)
 	 (split-line)
-	 (indent-for-tab-command))
-  (newline-and-indent))
+	 (indent-for-tab-command)))
 
 (defun my/line/new-line-and-indent ()
   "Add two newlines and put the cursor at the right indentation between them if a newline is

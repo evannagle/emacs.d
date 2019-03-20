@@ -54,3 +54,4 @@ site-lisp/package/
 /magithub
 .#*
 /my/private.el
+.DS_Store

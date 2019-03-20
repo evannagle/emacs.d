@@ -25,6 +25,11 @@
     (setenv "PATH" path-from-shell)
     (setq exec-path (split-string path-from-shell path-separator))))
 
+(defun my/shell/open-folder ()
+  "Open current folder in Finder"
+  (interactive)
+  (shell-command "open ."))
+
 (provide 'my/shell)
 
 ;;; shell.el ends here
