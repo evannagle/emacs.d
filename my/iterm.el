@@ -24,6 +24,11 @@
   (interactive)
   (my/shell-cmd/pick-and-run "iterm-rerun"))
 
+(defun my/iterm/open-in-cwd ()
+  "Open iterm and cd to the current directory."
+  (interactive)
+  (my/shell-cmd/pick-and-run "iterm-open" default-directory))
+
 (provide 'my/iterm)
 
 ;;; iterm.el ends here
