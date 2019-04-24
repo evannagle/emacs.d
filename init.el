@@ -101,6 +101,7 @@
  
  ;; esoteric
  'flex
+ 'flip
  ;;'mu4e
  'hours
  'web
