@@ -25,17 +25,11 @@
     ("+" "-")
     ("open" "closed")))
 
-(dolist (pair my/flip/dict)
-  (setq word1 (car pair))
-  (setq word2 (nth 1 pair))
-  (message "%s, %s" word1 word2))
-
-
 (defun my/flip/word ()
   "Flip true/false, 1/0, etc. to the inverse value"
   (interactive)
   (let (bounds pos1 pos2 word)
-    (setq bounds (bounds-of-thing-at-point 'symbol))
+    (setq bounds (bounds-of-thing-at-point 'word))
     (setq pos1 (car bounds))
     (setq pos2 (cdr bounds))
     (setq word (downcase (buffer-substring-no-properties pos1 pos2)))
@@ -43,9 +37,9 @@
     (dolist (pair my/flip/dict)
       (setq word1 (car pair))
       (setq word2 (nth 1 pair))
-      (if (string= word word1)
+      (if (string-match-p (regexp-quote word1) word)
 	  (replace-string word1 word2 nil pos1 pos2)
-	(if (string= word word2)
+	(if (string-match-p (regexp-quote word2) word)
 	    (replace-string word2 word1 nil pos1 pos2))))))
 
 (provide 'my/flip)
