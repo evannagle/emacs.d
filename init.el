@@ -89,6 +89,7 @@
  'split
  
  ;; modes
+ 'c-mode
  'gitignore-mode
  'less-css-mode
  'php-mode
