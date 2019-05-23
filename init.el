@@ -50,6 +50,7 @@
  'abbrevs
  'slime
  'speed
+ 'prettify-symbols-mode
  'tabs
  'exec-path-from-shell
  
@@ -82,7 +83,7 @@
  'helpful
  'hydra
  'magit
- 'org-bullets
+ ;; 'org-bullets
  'projectile
  'rainbow-delimiters
  'smartparens

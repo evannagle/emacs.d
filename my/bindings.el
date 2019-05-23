@@ -65,7 +65,7 @@
 (global-set-key (my/sbd "k") (lambda () (interactive) (dired nil)))
 (global-set-key (my/sbd "l") 'my/line/hungry-new-line-and-indent)
 (global-set-key (my/sbd "n") 'mu4e-compose-new)
-(global-set-key (my/sbd "m") 'mu4e)
+(global-set-key (my/sbd "M") 'mu4e)
 (global-set-key (my/sbd "O") 'my/org/file)
 (global-set-key (my/sbd "r") 'my/buffers/reload-current)
 (global-set-key (my/sbd "R") 'my/buffers/revert-current)

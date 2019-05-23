@@ -1,4 +1,4 @@
-;;; org-bullets.el --- Configuration for the org-bullets package
+;;; prettify-symbols-mode.el --- Configuration for the prettify-symbols-mode package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,17 +19,17 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package org-bullets
-  (use-package org-bullets
-    :ensure t
-    :init
-    (setq org-bullets-bullet-list
-	  '("◉" "◎" "-" "○" "►" "◇"))
-    :ensure t
-    :config
-    (if (display-graphic-p)
-	(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
 
-  (provide 'my/org-bullets)
+(global-prettify-symbols-mode 1)
 
-;;; org-bullets.el ends here
+(add-hook 'org-mode-hook (lambda ()
+   "Beautify Org Checkbox Symbol"
+   (push '("[ ]" .  "☐") prettify-symbols-alist)
+   (push '("[X]" . "☑" ) prettify-symbols-alist)
+   (push '("[-]" . "❍" ) prettify-symbols-alist)
+
+   (prettify-symbols-mode)))
+
+(provide 'my/prettify-symbols-mode)
+
+;;; prettify-symbols-mode.el ends here
