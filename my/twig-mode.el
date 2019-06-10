@@ -322,6 +322,11 @@
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.twig\\'" . twig-mode))
 
+(add-hook 'html-mode-hook
+	  (lambda ()
+	    (if (my/string-in-buffer? "{%")
+		  (twig-mode))))
+
 (provide 'my/twig-mode)
 
 ;;; twig-mode.el ends here

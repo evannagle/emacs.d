@@ -50,6 +50,7 @@
  'abbrevs
  'slime
  'speed
+ 'string
  'prettify-symbols-mode
  'tabs
  'exec-path-from-shell
@@ -94,8 +95,8 @@
  'gitignore-mode
  'less-css-mode
  'php-mode
- 'twig-mode
  'web-mode
+ 'twig-mode
  'typescript-mode
  'hl-block-mode
  

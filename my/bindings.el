@@ -74,6 +74,7 @@
 (global-set-key (my/sbd "t") 'my/flip/word)
 (global-set-key (my/sbd "q") 'save-buffers-kill-terminal)
 (global-set-key (my/sbd "v") 'whole-line-or-region-yank)
+(global-set-key (my/sbd "w") 'delete-window)
 (global-set-key (my/sbd "x") 'whole-line-or-region-kill-region)
 (global-set-key (my/sbd "<f13>") 'my/buffers/switch-to-scratch)
 (global-set-key (my/sbd "<f14>") 'my/buffers/switch-to-messages)
