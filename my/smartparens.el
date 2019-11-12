@@ -21,6 +21,21 @@
 
 ;; Cheatsheet: https://gist.github.com/pvik/8eb5755cc34da0226e3fc23a320a3c95
 
+(defun my/smartparens/newline-and-enter-sexp (&rest _ignored)
+  "Open a new brace or bracket expression, with relevant newlines and indent. "
+  (newline)
+  (indent-according-to-mode)
+  (forward-line -1)
+  (indent-according-to-mode))
+
+(defun my/smartparens/add-space-after-sexp-insertion (id action _context)
+  (when (eq action 'insert)
+    (save-excursion
+      (forward-char (length (plist-get (sp-get-pair id) :close)))
+      (when (or (eq (char-syntax (following-char)) ?w)
+                (looking-at (sp--get-opening-regexp)))
+        (insert " ")))))
+
 (use-package smartparens
   :ensure t
   :diminish smartparens-mode
@@ -30,6 +45,28 @@
     (sp-pair "\`" nil :actions :rem)
     (sp-pair "\~" nil :actions :rem)
     (sp-pair "\*" nil :actions :rem)
+    (sp-pair "(" ")" :wrap "M-(")
+    (sp-pair "[" "]" :wrap "M-[")
+    (sp-pair "{" "}" :wrap "M-{")
+
+    (sp-local-pair 'emacs-lisp-mode "`" "'")
+    (sp-local-pair 'emacs-lisp-mode "'" nil :actions nil)
+    (sp-local-pair 'comint-mode "'" nil :actions nil)
+
+    (define-key smartparens-mode-map (kbd "C-)") 'sp-forward-slurp-sexp)
+    (define-key smartparens-mode-map (kbd "C-(") 'sp-backward-slurp-sexp)
+    (define-key smartparens-mode-map (kbd "C-}") 'sp-forward-barf-sexp)
+    (define-key smartparens-mode-map (kbd "C-{") 'sp-backward-barf-sexp)
+    (define-key smartparens-mode-map (kbd "C-<right>") 'sp-forward-slurp-sexp)
+    (define-key smartparens-mode-map (kbd "C-<left>") 'sp-backward-slurp-sexp)
+    (define-key smartparens-mode-map (kbd "C-S-<right>") 'sp-forward-barf-sexp)
+    (define-key smartparens-mode-map (kbd "C-S-<left>") 'sp-backward-barf-sexp)
+
+    (sp-local-pair 'c++-mode "{" nil :post-handlers '((my/smartparens/newline-and-enter-sexp "RET")))
+    (sp-local-pair 'scss-mode "{" nil :post-handlers '((my/smartparens/newline-and-enter-sexp "RET")))
+    (sp-local-pair 'less-css-mode "{" nil :post-handlers '((my/smartparens/newline-and-enter-sexp "RET")))
+    (sp-local-pair 'emacs-lisp-mode "(" nil :post-handlers '(:add my/smartparens/add-space-after-sexp-insertion))
+
     (smartparens-global-mode 1)))
 
 (provide 'my/smartparens)

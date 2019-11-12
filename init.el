@@ -48,7 +48,6 @@
  'theme
  'org
  'abbrevs
- 'slime
  'speed
  'string
  'prettify-symbols-mode
@@ -84,6 +83,7 @@
  'helpful
  'hydra
  'magit
+
  ;; 'org-bullets
  'projectile
  'rainbow-delimiters
@@ -98,7 +98,12 @@
  'web-mode
  'twig-mode
  'typescript-mode
+ 'yaml-mode
+ 'jinja2-mode
  'hl-block-mode
+ 
+ ;; lisp!
+ 'slime
  
  ;; php
  'php-docs
@@ -115,4 +120,3 @@
  'hydra-bindings)
 
 ;;; init.el ends here
-(put 'dired-find-alternate-file 'disabled nil)

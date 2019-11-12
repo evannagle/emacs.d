@@ -26,7 +26,7 @@
 (add-to-list
  'org-capture-templates
  '("h" "Hours" entry (file my/hours/find-client-file)
-   "* %? \n  CLOCK:  => %^{Hours}\n  :DATE:  %T\n  :INFO: "))
+   "* %^{description} \n  CLOCK:  => %^{Hours}\n  :DATE:  %T"))
 
 (defun my/hours/clients ()
   "Returns a list of clients as defined by subdirs in my/hours"

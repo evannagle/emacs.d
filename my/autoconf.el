@@ -54,7 +54,7 @@
     ("/Users/evannagle/Dropbox/Apps/Beorg/learn/learn.org" "/Users/evannagle/Dropbox/Apps/Beorg/tasks.org" "/Users/evannagle/Dropbox/Apps/Beorg/agenda.org")))
  '(package-selected-packages
    (quote
-    (prettify-symbols-mode deferred inerital-scroll typescript-mode php-doc flex-mode bison-mode evil-commentary evil-surround fzf jinja2-mode evil-smartparens smartparens hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init slime use-package)))
+    (slime clojure-mode evil-lispy lispy yaml-mode prettify-symbols-mode deferred inerital-scroll typescript-mode php-doc flex-mode bison-mode evil-commentary evil-surround fzf jinja2-mode evil-smartparens smartparens hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init use-package)))
  '(safe-local-variable-values
    (quote
     ((eval local-set-key

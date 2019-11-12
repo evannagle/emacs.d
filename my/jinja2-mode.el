@@ -1,4 +1,4 @@
-;;; slime.el --- Configuration for the slime package
+;;; jinja2-mode.el --- Configuration for the jinja2-mode package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,16 +19,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package slime
-  :ensure t
+(use-package jinja2-mode
   :config
-  ;; (setq slime-path "/usr/local/share/emacs/site-lisp/slime/")
-  ;; (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/slime")
-  ;; (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
-  (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
-  (setq inferior-lisp-program "/usr/local/Cellar/sbcl/1.4.7/bin/sbcl")
-  (setq slime-contribs '(slime-fancy)))
+  (add-to-list 'auto-mode-alist '("\\.jinja\\'" . jinja2-mode))
+  (add-to-list 'auto-mode-alist '("\\.jinja2\\'" . jinj2-mode))
+  :ensure t)
 
-(provide 'my/slime)
+(provide 'my/jinja2-mode)
 
-;;; slime.el ends here
+;;; jinja2-mode.el ends here

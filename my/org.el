@@ -80,6 +80,12 @@
   (org-todo "DONE")
   (org-archive-subtree-default))
 
+(defun my/org/archive-item-with-hours ()
+  "Mark a task as done and associate hours with its completion"
+  (interactive)
+  (my/org/archive-item)
+  (org-capture nil "h"))
+
 (my/org/add-template "B" "sh")
 (my/org/add-template "E" "emacs-lisp")
 (my/org/add-template "P" "perl")

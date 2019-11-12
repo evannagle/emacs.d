@@ -1,4 +1,4 @@
-;;; slime.el --- Configuration for the slime package
+;;; lispy.el --- Configuration for the lispy package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,16 +19,11 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package slime
+(use-package lispy
   :ensure t
   :config
-  ;; (setq slime-path "/usr/local/share/emacs/site-lisp/slime/")
-  ;; (add-to-list 'load-path "/usr/local/share/emacs/site-lisp/slime")
-  ;; (add-hook 'lisp-mode-hook (lambda () (slime-mode t)))
-  (add-hook 'inferior-lisp-mode-hook (lambda () (inferior-slime-mode t)))
-  (setq inferior-lisp-program "/usr/local/Cellar/sbcl/1.4.7/bin/sbcl")
-  (setq slime-contribs '(slime-fancy)))
+  (add-hook 'emacs-lisp-mode-hook (lambda () (lispy-mode 1))))
 
-(provide 'my/slime)
+(provide 'my/lispy)
 
-;;; slime.el ends here
+;;; lispy.el ends here

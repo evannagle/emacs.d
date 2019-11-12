@@ -48,6 +48,7 @@
 (global-set-key (my/sbd "2") 'my/split/dir-below)
 (global-set-key (my/sbd "3") 'my/split/dir-right)
 (global-set-key (my/sbd "4") 'my/split/dir-right-delete-other-windows)
+(global-set-key (my/sbd "a") 'slime-eval-last-expression-in-repl)
 (global-set-key (my/sbd "b") 'bookmark-jump)
 ;; leave c for the clipboard
 (global-set-key (my/sbd "C") 'whole-line-or-region-kill-ring-save)
@@ -64,8 +65,8 @@
 (global-set-key (my/sbd "K") 'next-buffer)
 (global-set-key (my/sbd "k") (lambda () (interactive) (dired nil)))
 (global-set-key (my/sbd "l") 'my/line/hungry-new-line-and-indent)
-(global-set-key (my/sbd "n") 'mu4e-compose-new)
 (global-set-key (my/sbd "M") 'mu4e)
+(global-set-key (my/sbd "n") 'mu4e-compose-new)
 (global-set-key (my/sbd "O") 'my/org/file)
 (global-set-key (my/sbd "r") 'my/buffers/reload-current)
 (global-set-key (my/sbd "R") 'my/buffers/revert-current)
@@ -98,6 +99,7 @@
 	  '(lambda ()
 	     (define-key org-mode-map (kbd "C-c r") 'org-refile)
 	     (define-key org-mode-map (my/sbd "x") 'my/org/archive-item)
+	     (define-key org-mode-map (my/sbd "r") 'my/org/archive-item-with-hours)
 	     (define-key org-mode-map (my/sbd "e") 'org-ctrl-c-ctrl-c)))
 
 ;; smartparens
