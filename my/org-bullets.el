@@ -28,7 +28,7 @@
     :ensure t
     :config
     (if (display-graphic-p)
-	(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1)))))
+	(add-hook 'org-mode-hook (lambda () (org-bullets-mode 1))))))
 
   (provide 'my/org-bullets)
 

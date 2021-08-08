@@ -19,17 +19,39 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(setq custom-theme-directory (expand-file-name "themes" user-emacs-directory))
 
-(defvar my/theme/graphic 'dracula)
-(defvar my/theme/terminal 'material-elvis)
+(straight-use-package 'doom-themes)
 
-(set-frame-font "Menlo-12" t t)
+(use-package doom-themes
+  :config
+  ;; Global settings (defaults)
+  (setq doom-themes-enable-bold t    ; if nil, bold is universally disabled
+        doom-themes-enable-italic t) ; if nil, italics is universally disabled
+  ;; (load-theme 'doom-palenight t)
+  ;; (load-theme 'doom-snazzy t)
+  ;; (load-theme 'doom-spacegrey t)
+  ;; (load-theme 'doom-acario-dark t)
+  ;; (load-theme 'doom-challenger-deep t)
+  ;; (load-theme 'doom-horizon t)
+  ;; (load-theme 'doom-Iosvkem t)
+  ;; (load-theme 'doom-monokai-pro t)
+  ;; (load-theme 'doom-rouge t)
+  (load-theme 'doom-material t)
+  ;; (load-theme 'doom-vibrant t)
 
-(if (display-graphic-p)
-    (load-theme my/theme/graphic)
-  (load-theme my/theme/terminal))
+  ;; Enable flashing mode-line on errors
+  (doom-themes-visual-bell-config)
+  
+  ;; Enable custom neotree theme (all-the-icons must be installed!)
+  ;; (doom-themes-neotree-config)
+  ;; or for treemacs users
+  (setq doom-themes-treemacs-theme "doom-colors") ; use the colorful treemacs theme
+  ;; (doom-themes-treemacs-config)
+  
+  ;; Corrects (and improves) org-mode's native fontification.
+  (doom-themes-org-config))
+
+;;(set-face-attribute 'default nil :font "Droid Sans Mono for Powerline" :height 120 :weight 'light)
 
 (provide 'my/theme)
 
-;;; skin.el ends here

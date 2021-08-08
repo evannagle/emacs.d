@@ -314,10 +314,12 @@
           . sgml-font-lock-syntactic-keywords)))
   (set (make-local-variable 'indent-line-function) 'twig-indent-line))
 
-(define-key twig-mode-map (kbd "C-c c") 'twig-close-tag)
-(define-key twig-mode-map (kbd "C-c t") 'twig-insert-tag)
-(define-key twig-mode-map (kbd "C-c v") 'twig-insert-var)
-(define-key twig-mode-map (kbd "C-c #") 'twig-insert-comment)
+;; (define-key twig-mode-map (kbd "C-c c") 'twig-close-tag)
+;; (define-key twig-mode-map (kbd "C-c t") 'twig-insert-tag)
+;; (define-key twig-mode-map (kbd "C-c v") 'twig-insert-var)
+;; (define-key twig-mode-map (kbd "C-c #") 'twig-insert-comment)
+(define-key twig-mode-map (kbd "C-c e") 'emmet-expand-line)
+(define-key twig-mode-map (kbd "C-s e") 'emmet-expand-line)
 
 ;;;###autoload
 (add-to-list 'auto-mode-alist '("\\.twig\\'" . twig-mode))
@@ -325,8 +327,9 @@
 (add-hook 'html-mode-hook
 	  (lambda ()
 	    (if (my/string-in-buffer? "{%")
-		  (twig-mode))))
+		(twig-mode))))
 
 (provide 'my/twig-mode)
 
 ;;; twig-mode.el ends here
+

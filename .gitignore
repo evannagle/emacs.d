@@ -55,3 +55,4 @@ site-lisp/package/
 .#*
 /my/private.el
 .DS_Store
+straight/repos

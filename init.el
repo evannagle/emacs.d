@@ -1,4 +1,4 @@
-;;; init.el --- Emacs init file.
+;;; INIT.el --- Emacs init file.
 ;;; -*- lexical-binding: t -*-
 
 ;; Copyright (C) 2018 Evan Nagle
@@ -32,92 +32,183 @@
 (load my/.emacs.d/mods/packs.el t)
 
 (my/packs/load
- ;; core packs
+ ;; -------------------------------------------------------
+ ;; package management
+ ;; -------------------------------------------------------
+ 'straight
  'melpa
- 'backups
- 'buffers
- 'data-tuck
- 'dired
- 'quiet
- 'dechrome
- 'screen
- 'fzf
- 'line
- 'nums
- 'gpg
- 'theme
- 'org
- 'abbrevs
- 'speed
- 'string
- 'prettify-symbols-mode
- 'tabs
- 'exec-path-from-shell
- 
- ;; os specific
- 'os
- 'iterm
- 'shell
- 'shell-cmd
- 
- ;; for the vi-afflicted
- 'evil
- 'evil-commentary
- 'evil-collection
- 'evil-escape
- 'evil-magit
- 'evil-surround
- 
- ;; core elpa plugs
- 'ace-window
- 'ag
- 'company
- 'counsel
- 'avy
- 'ivy
- 
- ;; nice elpa plugs
- 'diminish
- 'expand-region
- 'elisp-def
- 'helpful
- 'hydra
- 'magit
 
- ;; 'org-bullets
- 'projectile
+ ;; https://github.com/raxod502/straight.el
+ ;; 'straight
+
+ ;; -------------------------------------------------------
+ ;; look and feel
+ ;; -------------------------------------------------------
+ 'theme
+
+ ;; global line numbering
+ 'nums 
+
  'rainbow-delimiters
- 'smartparens
- 'split
+
+ ;; https://emacsredux.com/blog/2014/08/25/a-peek-at-emacs-24-dot-4-prettify-symbols-mode/
+ ;; 'prettify-symbols-mode 
+
+ ;; -------------------------------------------------------
+ ;; org mode
+ ;; -------------------------------------------------------
+ 'org
+
+ ;; track project hours
+ 'hours 
+
+ ;; -------------------------------------------------------
+ ;; dired mode
+ ;; -------------------------------------------------------
+ 'dired
+ 'dired-k
+
+ ;; -------------------------------------------------------
+ ;; shell
+ ;; -------------------------------------------------------
+ ;; os specific
+ ;; https://github.com/purcell/exec-path-from-shell
+ ;; 'exec-path-from-shell
+
+ ;; 'os
+ ;; 'shell
+ ;; 'shell-cmd
  
- ;; modes
+ ;; -------------------------------------------------------
+ ;; for the vi-afflicted
+ ;; -------------------------------------------------------
+ ;; https://github.com/emacs-evil/evil
+ 'evil
+
+ ;; https://github.com/linktohack/evil-commentary
+ 'evil-commentary
+
+ ;; https://github.com/emacs-evil/evil-collection
+ ;; this includes dired bindings
+ 'evil-collection
+
+ ;; https://github.com/syl20bnr/evil-escape
+ ;;'evil-escape
+
+ ;; https://github.com/emacs-evil/evil-surround
+ ;; 'evil-surround
+
+ ;; -------------------------------------------------------
+ ;; utility / chrome
+ ;; -------------------------------------------------------
+ 'dechrome
+
+ ;; hide cached/stored data in .emacs.d subdirs
+ 'data-tuck
+
+ ;; https://github.com/Wilfred/helpful
+ 'helpful
+
+ ;; remove start screens and beeps
+ 'quiet
+
+ ;; https://github.com/Wilfred/elisp-def
+ 'elisp-def
+
+ ;; https://github.com/emacsmirror/diminish
+ 'diminish
+
+ ;; https://github.com/bbatsov/crux
+ 'crux
+ 
+ 'backups
+ 'line
+
+ ;; Abbreviations
+ ;; https://www.emacswiki.org/emacs/AbbrevMode
+ ;; 'abbrevs
+
+ ;; -------------------------------------------------------
+ ;; windows and buffers
+ ;; -------------------------------------------------------
+ 'ace-window
+ 'buffers
+ 'split
+
+ ;; https://www.emacswiki.org/emacs/CommandLogMode
+ ;; 'command-log
+
+ ;; -------------------------------------------------------
+ ;; spacing
+ ;; -------------------------------------------------------
+ 'dtrt-indent
+
+ ;; -------------------------------------------------------
+ ;; autocompletion and search
+ ;; -------------------------------------------------------
+ ;; https://github.com/Wilfred/ag.el
+ ;; silver searcher
+ 'ag
+
+;; https://github.com/company-mode/company-mode
+ 'company
+
+ ;; https://github.com/abo-abo/swiper
+ ;; ivy extensions
+ 'counsel
+
+ ;; https://github.com/bling/fzf.el
+ 'fzf
+
+ ;; https://github.com/abo-abo/swiper
+ ;; autocompletion
+ 'ivy
+
+ ;; https://github.com/joaotavora/yasnippet
+ 'yas
+
+ ;; #######################################################
+ ;; language modes
+ ;; #######################################################
+
+ ;; C
  'c-mode
- 'gitignore-mode
+
+ ;; CSS
  'less-css-mode
+ 
+ ;; Git
+ 'gitignore-mode
+ 
+ ;; JavaScript
+ 'typescript-mode
+
+ ;; PHP
  'php-mode
+ 'php-docs
+
+ ;; HTML
+ 'jinja2-mode
  'web-mode
  'twig-mode
- 'typescript-mode
- 'yaml-mode
- 'jinja2-mode
- 'hl-block-mode
  
- ;; lisp!
- 'slime
- 
- ;; php
- 'php-docs
- 
- ;; esoteric
- 'flex
- 'flip
- ;;'mu4e
- 'hours
- 'web
+ ;; Lua
+ ;; 'lua-mode
 
+ ;; Yaml
+ 'yaml-mode
+
+ ;; -------------------------------------------------------
  ;; bindings
+ ;; -------------------------------------------------------
  'bindings
- 'hydra-bindings)
+
+ ;; https://github.com/abo-abo/hydra
+ ;; 'hydra
+ ;; 'hydra-bindings
+ )
+
+(put 'dired-find-alternate-file 'disabled nil)
+(put 'downcase-region 'disabled nil)
 
 ;;; init.el ends here
-(put 'dired-find-alternate-file 'disabled nil)

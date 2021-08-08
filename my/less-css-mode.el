@@ -22,6 +22,20 @@
 (use-package less-css-mode
   :ensure t)
 
+(defun my/css/col ()
+  "Paste hex color into a color property"
+  (interactive)
+  (insert "color: ")
+  (clipboard-yank)
+  (insert ";"))
+
+(defun my/css/bg ()
+  "Paste hex color into a background property"
+  (interactive)
+  (insert "background: ")
+  (clipboard-yank)
+  (insert ";"))
+
 (provide 'my/less-css-mode)
 
 ;;; less-css-mode.el ends here

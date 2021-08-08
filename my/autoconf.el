@@ -28,13 +28,11 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   (quote
-    ("f540efec38befb1a2f37e98831d9ba5b8cc495b4dea75c499dfbe7d8c594be9d" "766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" default)))
+   '("3b69ddebc3b1386c63e70afa0eca90d1a775c52ad144d16df932400f3afe1c30" "c83c095dd01cde64b631fb0fe5980587deec3834dc55144a6e78ff91ebc80b19" "4ee3938bc870a55681c506dcef15ead25ebbd4d43d2f1f490225e4e0385ca162" "9b59e147dbbde5e638ea1cde5ec0a358d5f269d27bd2b893a0947c4a867e14c1" "8e1601ae929030a0314aa11a8d17a74c0ed3c5b455c04921c62043ed4fc48659" "c48551a5fb7b9fc019bf3f61ebf14cf7c9cdca79bcb2a4219195371c02268f11" "f540efec38befb1a2f37e98831d9ba5b8cc495b4dea75c499dfbe7d8c594be9d" "766c5700d551f8a3bbc3be8eb4c1e3329febcb7ba572c9ee2e83cb12e18854a8" default))
  '(epg-gpg-program "/usr/local/Cellar/gnupg/2.2.3/bin/gpg")
- '(mac-option-modifier (quote (:ordinary meta :function meta :mouse meta)))
+ '(ns-alternate-modifier '(:ordinary meta :function meta :mouse meta))
  '(org-agenda-custom-commands
-   (quote
-    (("n" "Agenda and all TODOs"
+   '(("n" "Agenda and all TODOs"
       ((agenda "" nil)
        (alltodo "" nil))
       nil)
@@ -45,33 +43,26 @@
 	     ((org-agenda-overriding-header "Next Tasks on Agenda")))
        (agenda ""
 	       ((org-deadline-warning-days 2)
-		(org-agenda-span
-		 (quote day))
+		(org-agenda-span 'day)
 		(org-agenda-overriding-header "Upcoming Deadlines"))))
-      nil nil))))
+      nil nil)))
  '(org-agenda-files
-   (quote
-    ("/Users/evannagle/Dropbox/Apps/Beorg/learn/learn.org" "/Users/evannagle/Dropbox/Apps/Beorg/tasks.org" "/Users/evannagle/Dropbox/Apps/Beorg/agenda.org")))
+   '("/Users/evannagle/Dropbox/Apps/Beorg/learn/learn.org" "/Users/evannagle/Dropbox/Apps/Beorg/tasks.org" "/Users/evannagle/Dropbox/Apps/Beorg/agenda.org"))
  '(package-selected-packages
-   (quote
-    (slime clojure-mode evil-lispy lispy yaml-mode prettify-symbols-mode deferred inerital-scroll typescript-mode php-doc flex-mode bison-mode evil-commentary evil-surround fzf jinja2-mode evil-smartparens smartparens hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init use-package)))
+   '(doom-themes lua-mode editorconfig slime clojure-mode evil-lispy lispy yaml-mode prettify-symbols-mode deferred inerital-scroll typescript-mode php-doc flex-mode bison-mode evil-commentary evil-surround fzf jinja2-mode evil-smartparens smartparens hydra org-mu4e evil-magit flx-ido flx evil-collection mu4e pass "ob-sh" ob-sh coffee-mode elisp-def evil-escape exec-path-from-shell whole-line-or-region evil web-mode php-mode less-css-mode gitignore-mode rainbow-delimiters projectile org-bullets magit helpful expand-region diminish counsel company ag ace-window benchmark-init use-package))
  '(safe-local-variable-values
-   (quote
-    ((eval local-set-key
+   '((eval local-set-key
 	   (kbd "<f11>")
-	   (quote
-	    (lambda nil
+	   '(lambda nil
 	      (interactive)
 	      (org-babel-goto-named-src-block "make-readme")
 	      (org-babel-execute-src-block)
-	      (outline-hide-sublevels 1))))
+	      (outline-hide-sublevels 1)))
      (eval progn
 	   (visual-line-mode t)
-	   (require
-	    (quote ox-extra))
+	   (require 'ox-extra)
 	   (ox-extras-activate
-	    (quote
-	     (ignore-headlines))))))))
+	    '(ignore-headlines))))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
