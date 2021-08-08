@@ -1,4 +1,4 @@
-;;; tabs.el --- Configuration for the tabs package
+;;; dtrt-indent.el --- Configuration for the dtrt-indent package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,14 +19,9 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(defvar my/tabs/are-spaces t)
+(use-package dtrt-indent
+    :ensure t)
 
-(if my/tabs/are-spaces
-    (progn
-      (setq tab-width 4) 
-      (setq indent-tabs-mode t))
-  (setq-default indent-tabs-mode nil))
+(provide 'my/dtrt-indent)
 
-(provide 'my/tabs)
-
-;;; tabs.el ends here
+;;; dtrt-indent.el ends here

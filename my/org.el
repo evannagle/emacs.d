@@ -86,6 +86,7 @@
   (my/org/archive-item)
   (org-capture nil "h"))
 
+(my/org/add-template "C" "C")
 (my/org/add-template "B" "sh")
 (my/org/add-template "E" "emacs-lisp")
 (my/org/add-template "P" "perl")

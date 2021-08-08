@@ -65,8 +65,8 @@
 (global-set-key (my/sbd "K") 'next-buffer)
 (global-set-key (my/sbd "k") (lambda () (interactive) (dired nil)))
 (global-set-key (my/sbd "l") 'my/line/hungry-new-line-and-indent)
-(global-set-key (my/sbd "M") 'mu4e)
-(global-set-key (my/sbd "n") 'mu4e-compose-new)
+;; (global-set-key (my/sbd "M") 'mu4e)
+;; (global-set-key (my/sbd "n") 'mu4e-compose-new)
 (global-set-key (my/sbd "O") 'my/org/file)
 (global-set-key (my/sbd "r") 'my/buffers/reload-current)
 (global-set-key (my/sbd "R") 'my/buffers/revert-current)
@@ -94,6 +94,19 @@
 (global-set-key (kbd "C-c o") 'org-open-at-point-global)
 (global-set-key (kbd "C-c c") 'org-capture)
 
+;; F keys for olkb
+
+(defun my/todos ()
+  "Jump to the TODOs bookmark at 't'"
+  (interactive)
+  (bookmark-jump "t"))
+
+(define-key global-map [f1] 'my/todos)
+(define-key global-map [f7] 'my/quickz/run)
+
+(define-key global-map [f6]
+  (lambda () (interactive) (org-capture nil "h")))
+
 ;; org mode
 (add-hook 'org-mode-hook
 	  '(lambda ()
@@ -101,6 +114,16 @@
 	     (define-key org-mode-map (my/sbd "x") 'my/org/archive-item)
 	     (define-key org-mode-map (my/sbd "r") 'my/org/archive-item-with-hours)
 	     (define-key org-mode-map (my/sbd "e") 'org-ctrl-c-ctrl-c)))
+
+;; html mode
+(add-hook 'html-mode-hook
+	  '(lambda ()
+	     (define-key html-mode-map (my/sbd "e") 'emmet-expand-line)))
+
+;; twig mode
+(add-hook 'twig-mode-hook
+	  '(lambda ()
+	     (define-key twig-mode-map (my/sbd "e") 'emmet-expand-line)))
 
 ;; smartparens
 (add-hook 'smartparens-mode-hook

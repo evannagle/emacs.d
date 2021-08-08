@@ -24,6 +24,8 @@
 (defvar my/package-template (expand-file-name "template.el.m4" my/.emacs.d/mods))
 (defvar my/packs/bookmarks '())
 
+(setq package-check-signature nil)
+
 (add-to-list 'my/packs/bookmarks `("mods" ,my/.emacs.d/mods))
 (add-to-list 'my/packs/bookmarks `("e" ,my/.emacs.d/))
 (add-to-list 'my/packs/bookmarks `("i" ,my/.emacs.d/init.el))
