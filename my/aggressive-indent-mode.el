@@ -1,4 +1,4 @@
-;;; evil-magit.el --- Configuration for the evil-magit package
+;;; aggressive-indent-mode.el --- Configuration for the aggressive-indent-mode package
 
 ;; Copyright (C) 2018 Evan Nagle
 
@@ -19,9 +19,12 @@
 ;; You should have received a copy of the GNU General Public License
 ;; along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
-(use-package evil-magit
-  :ensure t)
+(use-package aggressive-indent
+    :ensure t)
 
-(provide 'my/evil-magit)
+(global-aggressive-indent-mode 1)
+(add-to-list 'aggressive-indent-excluded-modes 'html-mode)
 
-;;; evil-magit.el ends here
+(provide 'my/aggressive-indent-mode)
+
+;;; aggressive-indent-mode.el ends here

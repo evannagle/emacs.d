@@ -99,6 +99,15 @@
  ;; 'evil-surround
 
  ;; -------------------------------------------------------
+ ;; git
+ ;; -------------------------------------------------------
+ ;; https://magit.vc/
+ 'magit
+
+ ;; https://github.com/emacs-evil/evil-magit
+ 'evil-magit
+
+ ;; -------------------------------------------------------
  ;; utility / chrome
  ;; -------------------------------------------------------
  'dechrome
@@ -142,6 +151,7 @@
  ;; spacing
  ;; -------------------------------------------------------
  'dtrt-indent
+ 'aggressive-indent-mode
 
  ;; -------------------------------------------------------
  ;; autocompletion and search
@@ -150,7 +160,7 @@
  ;; silver searcher
  'ag
 
-;; https://github.com/company-mode/company-mode
+ ;; https://github.com/company-mode/company-mode
  'company
 
  ;; https://github.com/abo-abo/swiper

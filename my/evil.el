@@ -50,6 +50,12 @@
   (define-key evil-insert-state-map (kbd "C-b") 'backward-char)
   (define-key evil-insert-state-map (kbd "C-t") 'transpose-chars))
 
+(use-package evil-collection
+  :after (evil)
+  :config
+  (setq evil-collection-mode-list '(dired))
+  (evil-collection-init))
+
 (provide 'my/evil)
 
 ;;; evil.el ends here
