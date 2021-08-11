@@ -73,11 +73,12 @@
  ;; -------------------------------------------------------
  ;; os specific
  ;; https://github.com/purcell/exec-path-from-shell
- ;; 'exec-path-from-shell
+ 'exec-path-from-shell
 
  ;; 'os
- ;; 'shell
+ 'shell
  ;; 'shell-cmd
+ 'shell-pop
  
  ;; -------------------------------------------------------
  ;; for the vi-afflicted
@@ -102,10 +103,10 @@
  ;; git
  ;; -------------------------------------------------------
  ;; https://magit.vc/
- 'magit
+ ;; 'magit
 
  ;; https://github.com/emacs-evil/evil-magit
- 'evil-magit
+ ;; 'evil-magit
 
  ;; -------------------------------------------------------
  ;; utility / chrome
@@ -151,7 +152,7 @@
  ;; spacing
  ;; -------------------------------------------------------
  'dtrt-indent
- 'aggressive-indent-mode
+ ;; 'aggressive-indent-mode
 
  ;; -------------------------------------------------------
  ;; autocompletion and search
